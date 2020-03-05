@@ -1,0 +1,10 @@
+/*******************************
+         Site Overrides
+*******************************/
+body{
+    background-color: #F0F2F5;
+}
+
+.ui.top.menu {
+    border-top: 4px solid #3498DB;
+}

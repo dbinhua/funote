@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, shrink-to-fit=no">
+    <title>Index</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" type="text/css" class="ui" href="../dist/semantic.min.css?v=1.1" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/Swiper/4.5.0/css/swiper.min.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/myapp.css" />
+</head>
+
+<body>
+<div class="container">
+    <!--nav start-->
+    <nav class="ui borderless menu top stackable" style="margin-bottom: 40px;">
+        <div class="ui container">
+            <div class="ui inline dropdown nav">
+                <a href="index.html">
+                    <img class="ui avatar image"  src="../../../images/logo.png">
+                    <span><b>Funote</b></span>
+                </a>
+            </div>
+
+            <a href="#" class="item secondary">工作笔记</a>
+            <a href="#" class="item secondary">聊天室</a>
+            <div class="ui simple item dropdown stackable secondary">
+                IT风向标  <i class="dropdown icon"></i>
+
+                <div class="ui menu stackable">
+                    <a href="#" class="item">
+                        <i class="icon home"></i> 测试分类
+                    </a>
+                </div>
+            </div>
+
+            <!--            <form class="ui fluid search item secondary" action="#" method="GET">-->
+            <!--                <div class="ui icon input">-->
+            <!--                    <input class="prompt" name="q" type="text" placeholder="搜索" autocomplete="off">-->
+            <!--                    <i class="search icon"></i>-->
+            <!--                </div>-->
+            <!--                <div id="search-result"></div>-->
+            <!--            </form>-->
+
+            <div class="right menu stackable secondary">
+                <div class="item">
+                    <a onclick="login()" href="javascript:;"><i class="icon sign in"></i> 登录 </a>
+                </div>
+
+                <!--                <div class="ui simple item dropdown stackable nav-dropdown">-->
+                <!--                    <img class="ui avatar image" src="./../../imgs/logo.png">-->
+                <!--                    luci  <i class="dropdown icon"></i>-->
+                <!--                    <div class="ui menu stackable">-->
+                <!--                        <a href="#" class="item">-->
+                <!--                            <i class="icon user"></i>-->
+                <!--                            个人中心-->
+                <!--                        </a>-->
+                <!--                        <a href="create.html" class="item">-->
+                <!--                            <i class="icon user"></i>-->
+                <!--                            写作中心-->
+                <!--                        </a>-->
+
+                <!--                        <a  class="item no-pjax" href="javascript:void(0)" data-url="#" data-method="POST" data-prompt="您确定要退出登录吗？" title="退出登录">-->
+                <!--                            <i class="icon sign out"></i>-->
+                <!--                            退出-->
+                <!--                        </a>-->
+                <!--                    </div>-->
+                <!--                </div>-->
+
+            </div>
+
+        </div>
+    </nav>
+    <!--nav end-->
+
+    <div class="ui centered grid container stackable">
+        <div class="twelve wide column stacked">
+            <div class="ui segment" style="height: 300px;background-image: url(../../../images/personal.png);background-size: cover;border:0px;position:relative;">
+                <a class="ui blue right ribbon label"><i class="edit icon"></i>编辑资料</a>
+                <div style="position:absolute; top:30%; right:0; left:0; margin:auto;">
+                    <img class="ui tiny circular centered image" src="../../../images/logo.png" style="border: 3px solid beige;">
+                    <h3 class="mb-4 mb-3" style="color: white;text-align: center">
+                        差不多先森的猫&nbsp;&nbsp;<i class="circular tiny inverted blue mars icon"></i>
+                    </h3>
+                </div>
+            </div>
+            <div class="ui segment">
+                <div style="padding:14px;">
+                    <div class="ui feed" style="padding: 0px 14px;">
+                        <h3 class="mb-4 mb-3">
+                            <i class="icon feed"></i> Ta 的动态
+                        </h3>
+                        <div class="event">
+                            <div class="label">
+                                <img src="../../../images/logo.png">
+                            </div>
+                            <div class="content">
+                                <div class="summary"><a class="user"> Elliot Fu </a> added you as a friend <div class="date">1 小时前 </div>
+                                </div>
+                                <div class="meta">
+                                    <a class="like"><i class="like icon"></i> 4 Likes </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ui divider"></div>
+                        <div class="event">
+                            <div class="label">
+                                <img src="../../../images/logo.png">
+                            </div>
+                            <div class="content">
+                                <div class="summary"><a>Helen Troy</a> 增加 <a>2 新的 illustrations</a> <div class="date">4 天前 </div>
+                                </div>
+                                <div class="extra images">
+                                    <a><img src="../../../images/logo.png"></a>
+                                    <a><img src="../../../images/logo.png"></a>
+                                </div>
+                                <div class="meta">
+                                    <a class="like"><i class="like icon"></i> 1 Like </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ui divider"></div>
+                        <div class="event">
+                            <div class="label">
+                                <img src="../../../images/logo.png">
+                            </div>
+                            <div class="content">
+                                <div class="summary"><a class="user"> Jenny Hess </a> 将你加为好友 <div class="date">2 天前 </div>
+                                </div>
+                                <div class="meta">
+                                    <a class="like"><i class="like icon"></i> 8 Likes </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ui divider"></div>
+                        <div class="event">
+                            <div class="label">
+                                <img src="../../../images/logo.png">
+                            </div>
+                            <div class="content">
+                                <div class="summary"><a>Joe Henderson</a> posted on his page <div class="date">3 天前 </div>
+                                </div>
+                                <div class="extra text">Ours is a life of constant reruns. We're always circling back to where we'd we started, then starting all over again. Even if we don't run extra laps that day, we surely will come back for more of the same another day soon. </div>
+                                <div class="meta">
+                                    <a class="like"><i class="like icon"></i> 5 Likes </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ui divider"></div>
+                        <div class="event">
+                            <div class="label">
+                                <img src="../../../images/logo.png">
+                            </div>
+                            <div class="content">
+                                <div class="summary"><a>Justen Kitsune</a> 上传 <a>2 张关于你的照片</a> <div class="date">4 天前 </div>
+                                </div>
+                                <div class="extra images">
+                                    <a><img src="../../../images/logo.png"></a>
+                                    <a><img src="../../../images/logo.png"></a>
+                                </div>
+                                <div class="meta">
+                                    <a class="like"><i class="like icon"></i> 41 Likes </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- footer start -->
+    <div class="ui inverted vertical segment" style="padding-top: 6em;padding-bottom: 6em;margin-top: 4em;background: #000">
+        <div class="ui center aligned container">
+            <div class="ui stackable inverted divided grid">
+                <div class="five wide column">
+                    <h4 class="ui inverted header">关于</h4>
+                    <div class="ui inverted link list">
+                        <span class="item">蜀ICP备18023940号-1</span>
+                        <span class="item">&copy 2018-2019</span>
+                        <span class="item">Design By Lucius</span>
+                    </div>
+                </div>
+                <div class="five wide column">
+                    <h4 class="ui inverted header">统计信息</h4>
+                    <div class="ui inverted link list">
+                        <span class="item">当前在线人数：34</span>
+                        <span class="item">历史访问人数：566</span>
+                    </div>
+                </div>
+                <div class="five wide column">
+                    <h4 class="ui inverted header">联系方式</h4>
+                    <div class="ui inverted link list">
+                        <a href="#" class="item"><i class="weibo icon"></i>&nbsp;&nbsp;微博</a>
+                        <a href="#" class="item"><i class="qq icon"></i>&nbsp;&nbsp;QQ</a>
+                        <a href="#" class="item"><i class="mail icon"></i>&nbsp;&nbsp;邮件</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer end -->
+</div>
+</body>
+<!------ 登录弹层 start ------>
+<div class="ui mini modal">
+    <i class="close icon"></i>
+    <div class="five wide column">
+        <div class="ui padded segment">
+            <div class="content">
+                <h3 style="text-align: center">登录</h3>
+
+                <div class="ui divider"></div>
+
+                <div class="ui message warning">
+                    <i class="icon info"></i> 本站暂不开放注册哦～
+                </div>
+
+                <form class="ui form" role="form" method="POST" action="" accept-charset="UTF-8">
+                    <input type="hidden" name="remember" value="yes">
+                    <input type="hidden" name="return_back" value="no">
+
+                    <div class="field">
+                        <div class="ui left icon input">
+                            <i class="user icon"></i>
+                            <input type="text" name="email" placeholder="请输入注册邮箱" value="">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui left icon input">
+                            <i class="lock icon"></i>
+                            <input type="password" name="password" placeholder="请输入密码" value="">
+                        </div>
+                    </div>
+                    <button class="ui blue icon button fluid"> 登录 </button>
+                    <!--                    <div style="margin-top: 1rem;text-align: right">-->
+                    <!--                        <a href="#" target="_blank">-->
+                    <!--                            忘记密码?-->
+                    <!--                        </a>-->
+                    <!--                    </div>-->
+
+                    <div class="ui horizontal divider fs-tiny text-mute">
+                        第三方账号登录
+                    </div>
+                    <a class="ui red fluid button" href="#"><i class="weibo icon"></i> 微博 </a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!------ 登录弹层 end ------>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="../dist/semantic.min.js"></script>
+<script src="https://cdn.bootcss.com/Swiper/4.5.0/js/swiper.min.js"></script>
+<script src="../assets/js/pager.js"></script>
+<script type="text/javascript">
+    $(function() {
+        $('.ui.form').form({
+            inline: true,
+            // on: 'blur',
+            fields: {
+                email : {
+                    identifier: 'email',
+                    rules: [
+                        {
+                            type: 'empty',
+                            prompt: '邮箱不能为空'
+                        },
+                        {
+                            type: 'email',
+                            prompt: '请输入正确的邮箱'
+                        }
+                    ]
+                },
+                password : {
+                    identifier: 'password',
+                    rules: [
+                        {
+                            type: 'empty',
+                            prompt: '密码不能为空'
+                        },
+                        {
+                            type: 'minLength[6]',
+                            prompt: '密码至少6位'
+                        }
+                    ]
+                }
+            }
+        });
+    });
+
+    $('.menu .item').tab();
+    $('#error-div').dropdown();
+
+    var mySwiper = new Swiper(".swiper-container", {
+
+        autoplay: {
+            delay: 6000, //6秒切换一次
+        },
+        speed: 300,
+        slidesPerView: 3,
+        spaceBetween: 10,
+        slidesPerGroup: 3,
+        loop: true,
+
+        //分页索引
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true
+        },
+
+        //分页按钮
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev"
+        }
+
+    });
+
+    $('.col-sm-4').mouseover(function(){
+        mySwiper.autoplay.stop();
+    })
+
+    $('.col-sm-4').mouseout(function(){
+        mySwiper.autoplay.start();
+    })
+
+    function login() {
+        $('.ui.mini.modal').modal({blurring: true}).modal('show');
+    }
+
+    $("#pager").zPager({
+        totalData: 50,
+        htmlBox: $('#wraper'),
+        btnShow: true,
+        ajaxSetData: false
+    });
+
+    function currentPage(currentPage){
+        /*
+            触发页码数位置： Page/js/pager.js 64行
+        */
+        console.log("当前页码数：" + currentPage);
+    }
+</script>
+</html>
+
+

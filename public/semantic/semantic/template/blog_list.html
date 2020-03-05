@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, shrink-to-fit=no">
+    <title>Index</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" type="text/css" class="ui" href="../dist/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/Swiper/4.5.0/css/swiper.min.css" />
+    <link rel="stylesheet" type="text/css" href="../statics/css/myapp.css" />
+</head>
+
+<body>
+<div class="container">
+        <!--nav start-->
+        <nav class="ui borderless menu top stackable" style="margin-bottom: 30px;">
+            <div class="ui container">
+                <div class="ui inline scrolling dropdown" style="padding-left: 22px;display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-align: center;-ms-flex-align: center;align-items: center;">
+                    <div class="text" style="color:#2bbbff;display: flex;">
+                        <img class="ui image" style="width:26px;height:26px;margin-top:-2px;" src="../imgs/logo.png">
+                        <span>Funote</span>
+                    </div>
+                </div>
+
+                <a href="#" class="item secondary">工作笔记</a>
+                <a href="#" class="item secondary">聊天室</a>
+                <div class="ui simple item dropdown stackable secondary">
+                    IT风向标  <i class="dropdown icon"></i>
+
+                    <div class="ui menu stackable">
+                        <a href="#" class="item">
+                            <i class="icon home"></i> 测试分类
+                        </a>
+                    </div>
+                </div>
+
+                <form class="ui fluid category search item secondary" action="#" method="GET">
+                    <div class="ui icon input">
+                        <input class="prompt" name="q" type="text" placeholder="搜索" autocomplete="off">
+                        <i class="search icon"></i>
+                    </div>
+                    <div class="results"></div>
+                </form>
+
+                <div class="right menu stackable secondary">
+                    <div class="item">
+                        <a onclick="login()" href="#"><i class="icon sign in"></i> 登录 </a>
+                    </div>
+                </div>
+
+                <!--                    <div class="stackable item" style="width: 26% !important;position: absolute !important;right: 0 !important;height: 52px !important;">-->
+                <!--                        <a onclick="login()" href="#"><i class="icon sign in"></i> 登录 </a>-->
+                <!--                    </div>-->
+
+            </div>
+        </nav>
+        <!--nav end-->
+
+        <!-- 推荐位start -->
+        <div class="swiper-container-solution">
+            <div class="selected-solution">
+                <div>
+                    <div class="swiper-container">
+                        <div class="solution-cardlist swiper-wrapper">
+
+                            <div class="col-sm-4 swiper-slide">
+                                <div class="solution-card">
+                                    <img src="../statics/images/a1.png" width="100%">
+                                    <h3>快速获取文档元素</h3>
+                                    <p>jQuery的选择机制构建于Css的选择器，它提供了快速查询DOM文档中元素的能力，而且大大强化了JavaScript中获取页面元素的方式。</p>
+                                    <span>
+                                        <a href="#"><span class="arrow-more">了解详情</span><span class="arrow-f"></span></a>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-4 swiper-slide">
+                                <div class="solution-card">
+                                    <img src="../statics/images/a2.png" width="100%">
+                                    <h3>提供漂亮的页面动态效果</h3>
+                                    <p>jQuery中内置了一系列的动画效果，可以开发出非常漂亮的网页，许多网站都使用jQuery的内置的效果</p>
+                                    <span><a  href="#"><span class="arrow-more">了解详情</span><span class="arrow-f"></span></a>
+                                        </a>
+                        </span>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 swiper-slide">
+                                <div class="solution-card">
+                                    <img src="../statics/images/a3.png" width="100%">
+                                    <h3>创建AJAX无刷新网页</h3>
+                                    <p>AJAX是异步的JavaScript和ML的简称，可以开发出非常灵敏无刷新的网页，特别是开发服务器端网页时</p>
+                                    <span><a  href="#"><span class="arrow-more">了解详情</span><span class="arrow-f"></span></a>
+                        </span>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 swiper-slide">
+                                <div class="solution-card">
+                                    <img src="../statics/images/a4.png" width="100%">
+                                    <h3>增强的事件处理</h3>
+                                    <p>jQuery提供了各种页面事件，它可以避免程序员在HTML中添加太事件处理代码</p>
+                                    <span><a  href="#"><span class="arrow-more">了解详情</span><span class="arrow-f"></span></a>
+                        </span>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 swiper-slide">
+                                <div class="solution-card">
+                                    <img src="../statics/images/a5.png" width="100%">
+                                    <h3>提供对JavaScript语言的增强</h3>
+                                    <p>jQuery提供了对基本JavaScript结构的增强，比如元素迭代和数组处理等操作。</p>
+                                    <span><a  href="#"><span class="arrow-more">了解详情</span><span class="arrow-f"></span></a>
+                        </span>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 swiper-slide">
+                                <div class="solution-card">
+                                    <img src="../statics/images/a6.png" width="100%">
+                                    <h3>更改网页内容</h3>
+                                    <p>jQuery可以修改网页中的内容，比如更改网页的文本、插入或者翻转网页图像</p>
+                                    <span><a  href="#"><span class="arrow-more">了解详情</span><span class="arrow-f"></span></a>
+                        </span>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 swiper-slide">
+                                <div class="solution-card">
+                                    <img src="../statics/images/a3.png" width="100%">
+                                    <h3>提供对JavaScript语言的增强</h3>
+                                    <p>jQuery提供了对基本JavaScript结构的增强，比如元素迭代和数组处理等操作。</p>
+                                    <span><a  href="#"><span class="arrow-more">了解详情</span><span class="arrow-f"></span></a>
+                        </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination solution-pagination"></div>
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+        </div>
+        <!-- 推荐位end -->
+
+        <div class="ui centered grid container stackable">
+            <div class="twelve wide column stacked segments">
+                <div class="ui segment" style="padding: 0px 6px;">
+                    <div style="padding: 0px 14px;">
+                        <div class="ui middle aligned divided list">
+
+                            <div class="item" style="height: 60px;">
+                                <img class="ui avatar image" src="../imgs/logo.png">
+                                <div class="content" style="width: 80%;">
+                                    <span class="header" style="line-height: 57px;">
+                                        <span class="ui label red">置顶</span>
+                                        <a>新课程发布：《Laravel 性能优化入门》</a>
+                                    </span>
+                                </div>
+                                <div class="content" style="width: 16%;float: right;text-align: right;font-size: 10px;line-height: 57px;color: #C1C1C2">
+                                    <span>
+                                        <i class="heart outline icon"></i>15
+                                        <span>&nbsp;|&nbsp;刚刚</span>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="item" style="height: 60px;">
+                                <img class="ui avatar image" src="../imgs/logo.png">
+                                <div class="content" style="width: 80%;">
+                                    <span class="header" style="line-height: 53px;">
+                                        <span class="ui label grey">转载</span>
+                                        <a>短链的秘密 --来自掘金专栏</a>
+                                    </span>
+                                </div>
+                                <div class="content" style="width: 16%;float: right;text-align: right;font-size: 10px;line-height: 57px;color: #C1C1C2">
+                                    <span>
+                                        <i class="heart outline icon"></i>15
+                                        <span>&nbsp;|&nbsp;刚刚</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="item" style="height: 60px;">
+                                <img class="ui avatar image" src="../imgs/logo.png">
+                                <div class="content" style="width: 80%;">
+                                    <span class="header" style="line-height: 53px;">
+                                        <span class="ui label grey">转载</span>
+                                        <a>短链的秘密 --来自掘金专栏</a>
+                                    </span>
+                                </div>
+                                <div class="content" style="width: 16%;float: right;text-align: right;font-size: 10px;line-height: 57px;color: #C1C1C2">
+                                    <span>
+                                        <i class="heart outline icon"></i>15
+                                        <span>&nbsp;|&nbsp;刚刚</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="item" style="height: 60px;">
+                                <img class="ui avatar image" src="../imgs/logo.png">
+                                <div class="content" style="width: 80%;">
+                                    <span class="header" style="line-height: 53px;">
+                                        <span class="ui label grey">转载</span>
+                                        <a>短链的秘密 --来自掘金专栏</a>
+                                    </span>
+                                </div>
+                                <div class="content" style="width: 16%;float: right;text-align: right;font-size: 10px;line-height: 57px;color: #C1C1C2">
+                                    <span>
+                                        <i class="heart outline icon"></i>15
+                                        <span>&nbsp;|&nbsp;刚刚</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="item" style="height: 60px;">
+                                <img class="ui avatar image" src="../imgs/logo.png">
+                                <div class="content" style="width: 80%;">
+                                    <span class="header" style="line-height: 53px;">
+                                        <span class="ui label grey">转载</span>
+                                        <a>短链的秘密 --来自掘金专栏</a>
+                                    </span>
+                                </div>
+                                <div class="content" style="width: 16%;float: right;text-align: right;font-size: 10px;line-height: 57px;color: #C1C1C2">
+                                    <span>
+                                        <i class="heart outline icon"></i>15
+                                        <span>&nbsp;|&nbsp;刚刚</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="item" style="height: 60px;">
+                                <img class="ui avatar image" src="../imgs/logo.png">
+                                <div class="content" style="width: 80%;">
+                                    <span class="header" style="line-height: 53px;">
+                                        <span class="ui label grey">转载</span>
+                                        <a>短链的秘密 --来自掘金专栏</a>
+                                    </span>
+                                </div>
+                                <div class="content" style="width: 16%;float: right;text-align: right;font-size: 10px;line-height: 57px;color: #C1C1C2">
+                                    <span>
+                                        <i class="heart outline icon"></i>15
+                                        <span>&nbsp;|&nbsp;刚刚</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="item" style="height: 60px;">
+                                <img class="ui avatar image" src="../imgs/logo.png">
+                                <div class="content" style="width: 80%;">
+                                    <span class="header" style="line-height: 53px;">
+                                        <span class="ui label grey">转载</span>
+                                        <a>短链的秘密 --来自掘金专栏</a>
+                                    </span>
+                                </div>
+                                <div class="content" style="width: 16%;float: right;text-align: right;font-size: 10px;line-height: 57px;color: #C1C1C2">
+                                    <span>
+                                        <i class="heart outline icon"></i>15
+                                        <span>&nbsp;|&nbsp;刚刚</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="item" style="height: 60px;">
+                                <img class="ui avatar image" src="../imgs/logo.png">
+                                <div class="content" style="width: 80%;">
+                                    <span class="header" style="line-height: 53px;">
+                                        <span class="ui label grey">转载</span>
+                                        <a>短链的秘密 --来自掘金专栏</a>
+                                    </span>
+                                </div>
+                                <div class="content" style="width: 16%;float: right;text-align: right;font-size: 10px;line-height: 57px;color: #C1C1C2">
+                                    <span>
+                                        <i class="heart outline icon"></i>15
+                                        <span>&nbsp;|&nbsp;刚刚</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="item" style="height: 60px;">
+                                <img class="ui avatar image" src="../imgs/logo.png">
+                                <div class="content" style="width: 80%;">
+                                    <span class="header" style="line-height: 53px;">
+                                        <span class="ui label grey">转载</span>
+                                        <a>短链的秘密 --来自掘金专栏</a>
+                                    </span>
+                                </div>
+                                <div class="content" style="width: 16%;float: right;text-align: right;font-size: 10px;line-height: 57px;color: #C1C1C2">
+                                    <span>
+                                        <i class="heart outline icon"></i>15
+                                        <span>&nbsp;|&nbsp;刚刚</span>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="item" style="height: 60px;">
+                                <img class="ui avatar image" src="../imgs/02.jpeg">
+                                <div class="content" style="width: 80%;">
+                                    <span class="header" style="line-height: 57px;">
+                                        <span class="ui label grey">转载</span>
+                                        <a>短链的秘密 --来自掘金专栏</a>
+                                    </span>
+                                </div>
+                                <div class="content" style="width: 16%;float: right;text-align: right;font-size: 10px;line-height: 57px;color: #C1C1C2">
+                                    <span>
+                                        <i class="heart outline icon"></i>15
+                                        <span>&nbsp;|&nbsp;刚刚</span>
+                                    </span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- page start -->
+                    <div style="text-align: center;margin:30px auto;">
+                        <div id="pager" class="pager clearfix">
+                        </div>
+                    </div>
+                    <!-- page end -->
+                </div>
+
+
+            </div>
+
+            <!-- right sidebar start-->
+            <div class="four wide column stackable">
+                <div class="item header sidebar">
+                    <div class="ui card responsive">
+                        <div class="content">
+                            <div class="header">
+                                <i class="icon translate"></i> 本周译者排行
+
+                                <a class="pull-right more-btn ui popover rm-link-color" data-variation="inverted" data-content="查看历史排行" href="https://learnku.com/explore/translation-ranking">
+                                    <i class="icon ellipsis horizontal"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class=" content tag-active-user-card rm-top-bottom-padding">
+                            <div class="ui middle aligned divided list">
+                                <a class="item" href="https://learnku.com/users/13045/translations">
+                                    <div class="right floated content">
+                                        <div class="ui label basic circular">8</div>
+                                    </div>
+                                    <img class="ui avatar image" src="../imgs/02.jpeg">
+                                    <div class="content">
+                                        水源西守歌
+                                    </div>
+                                </a>
+                                <a class="item" href="https://learnku.com/users/25425/translations">
+                                    <div class="right floated content">
+                                        <div class="ui label basic circular">4</div>
+                                    </div>
+                                    <img class="ui avatar image" src="../imgs/02.jpeg">
+                                    <div class="content">
+                                        zhouzishu
+                                    </div>
+                                </a>
+                                <a class="item" href="https://learnku.com/users/22289/translations">
+                                    <div class="right floated content">
+                                        <div class="ui label basic circular">3</div>
+                                    </div>
+                                    <img class="ui avatar image" src="../imgs/02.jpeg">
+                                    <div class="content">
+                                        miss201
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui card responsive" style="background-color: transparent;padding: 0px;    margin-top: 2px;">
+                        <div class="content" style="padding: 0px;">
+                            <a class="" href="https://www.ucloud.cn/site/active/cdn-ufile.html?ytag=laravelcdn" target="_blank" style="display: block;border-top: 1px solid #d3e0e9;border-bottom: 1px solid #d3e0e9;">
+                                <img src="../imgs/02.jpeg" class="ui popover" data-variation="inverted" data-content="服务器赞助商：UCloud" width="100%">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="ui card responsive">
+                        <div class="content">
+                            <div class="header text-center">
+                                技术栈
+                            </div>
+                        </div>
+
+                        <div class="content text-center" style="padding-top:5px">
+                            <a class="" href="https://www.easywechat.com/" rel="nofollow" target="_blank" style="margin-top: 10px;display: block;">
+                                <img src="../imgs/02.jpeg" class="ui popover" data-variation="inverted" data-content="EasyWeChat 微信开发，从未如此简单" width="100%" style="width:150px; margin: 3px 0;">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- right sidebar end-->
+        </div>
+
+        <div class="ui inverted vertical footer segment" style="padding-top: 6em;padding-bottom: 6em;margin-top: 6em;background: #000">
+            <div class="ui center aligned container">
+                <div class="ui stackable inverted divided grid">
+                    <div class="five wide column">
+                        <h4 class="ui inverted header">关于</h4>
+                        <div class="ui inverted link list">
+                            <span class="item">蜀ICP备18023940号-1</span>
+                            <span class="item">&copy 2018-2019</span>
+                            <span class="item">Design By Lucius</span>
+                        </div>
+                    </div>
+                    <div class="five wide column">
+                        <h4 class="ui inverted header">统计信息</h4>
+                        <div class="ui inverted link list">
+                            <span class="item">当前在线人数：34</span>
+                            <span class="item">历史访问人数：566</span>
+                        </div>
+                    </div>
+                    <div class="five wide column">
+                        <h4 class="ui inverted header">联系方式</h4>
+                        <div class="ui inverted link list">
+                            <a href="#" class="item"><i class="weibo icon"></i>&nbsp;&nbsp;微博</a>
+                            <a href="#" class="item"><i class="qq icon"></i>&nbsp;&nbsp;QQ</a>
+                            <a href="#" class="item"><i class="mail icon"></i>&nbsp;&nbsp;邮件</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+</body>
+<!------ 登录弹层 start ------>
+<div class="ui mini modal">
+    <i class="close icon"></i>
+    <div class="five wide column">
+        <div class="ui blue padded segment">
+            <div class="content">
+                <h3 style="text-align: center">登录</h3>
+
+                <div class="ui divider"></div>
+
+                <div class="ui message warning">
+                    <i class="icon info"></i> 本站暂不开放注册哦～
+                </div>
+
+                <form class="ui form" role="form" method="POST" action="" accept-charset="UTF-8">
+                    <input type="hidden" name="remember" value="yes">
+                    <input type="hidden" name="return_back" value="no">
+
+                    <div class="field">
+                        <div class="ui left icon input">
+                            <i class="user icon"></i>
+                            <input type="text" name="email" placeholder="请输入注册邮箱" value="">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui left icon input">
+                            <i class="lock icon"></i>
+                            <input type="password" name="password" placeholder="请输入密码" value="">
+                        </div>
+                    </div>
+                    <button class="ui blue icon button fluid"> 登录 </button>
+                    <!--                    <div style="margin-top: 1rem;text-align: right">-->
+                    <!--                        <a href="#" target="_blank">-->
+                    <!--                            忘记密码?-->
+                    <!--                        </a>-->
+                    <!--                    </div>-->
+
+                    <div class="ui horizontal divider fs-tiny text-mute">
+                        第三方账号登录
+                    </div>
+                    <a class="ui red fluid button" href="#"><i class="weibo icon"></i> 微博 </a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!------ 登录弹层 end ------>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="../dist/semantic.min.js"></script>
+<script src="https://cdn.bootcss.com/Swiper/4.5.0/js/swiper.min.js" type="text/javascript"></script>
+<script src="../statics/js/pager.js"></script>
+<script type="text/javascript">
+    $(function() {
+        $('.ui.form').form({
+            inline: true,
+            // on: 'blur',
+            fields: {
+                email : {
+                    identifier: 'email',
+                    rules: [
+                        {
+                            type: 'empty',
+                            prompt: '邮箱不能为空'
+                        },
+                        {
+                            type: 'email',
+                            prompt: '请输入正确的邮箱'
+                        }
+                    ]
+                },
+                password : {
+                    identifier: 'password',
+                    rules: [
+                        {
+                            type: 'empty',
+                            prompt: '密码不能为空'
+                        },
+                        {
+                            type: 'minLength[6]',
+                            prompt: '密码至少6位'
+                        }
+                    ]
+                }
+            }
+        });
+    })
+
+    var mySwiper = new Swiper(".swiper-container", {
+
+        autoplay: {
+            delay: 6000, //6秒切换一次
+        },
+        speed: 300,
+        slidesPerView: 3,
+        spaceBetween: 10,
+        slidesPerGroup: 3,
+        loop: true,
+
+        //分页索引
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true
+        },
+
+        //分页按钮
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev"
+        }
+
+    });
+
+    $('.col-sm-4').mouseover(function(){
+        mySwiper.autoplay.stop();
+    })
+
+    $('.col-sm-4').mouseout(function(){
+        mySwiper.autoplay.start();
+    })
+
+    function login() {
+        $('.ui.mini.modal').modal({blurring: true}).modal('show');
+    }
+
+    $("#pager").zPager({
+        totalData: 50,
+        htmlBox: $('#wraper'),
+        btnShow: true,
+        ajaxSetData: false
+    });
+
+    function currentPage(currentPage){
+        /*
+            触发页码数位置： Page/js/pager.js 64行
+        */
+        console.log("当前页码数：" + currentPage);
+    }
+</script>
+</html>
+

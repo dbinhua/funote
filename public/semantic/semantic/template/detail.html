@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, shrink-to-fit=no">
+    <title>Detail</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" type="text/css" class="ui" href="../dist/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/Swiper/4.5.0/css/swiper.min.css" />
+    <link rel="stylesheet" type="text/css" href="../statics/css/myapp.css" />
+    <link rel="stylesheet" type="text/css" href="../statics/css/prism.css" />
+</head>
+
+<body>
+<div class="container">
+    <!--nav start-->
+    <nav class="ui borderless menu top stackable">
+        <div class="ui container">
+            <div class="ui inline dropdown nav">
+                <a href="index.html">
+                    <img class="ui avatar image"  src="../imgs/logo.png">
+                    <span style="color: #777777"><b>Funote</b></span>
+                </a>
+            </div>
+
+            <a href="#" class="item secondary">工作笔记</a>
+            <a href="#" class="item secondary">聊天室</a>
+            <div class="ui simple item dropdown stackable secondary">
+                IT风向标  <i class="dropdown icon"></i>
+
+                <div class="ui menu stackable">
+                    <a href="#" class="item">
+                        <i class="icon home"></i> 测试分类
+                    </a>
+                </div>
+            </div>
+
+            <form class="ui fluid search item secondary" action="#" method="GET">
+                <div class="ui icon input">
+                    <input class="prompt" name="q" type="text" placeholder="搜索" autocomplete="off">
+                    <i class="search icon"></i>
+                </div>
+                <div id="search-result"></div>
+            </form>
+
+            <div class="right menu stackable secondary">
+                <!--                <div class="item">-->
+                <!--                    <a onclick="login()" href="#"><i class="icon sign in"></i> 登录 </a>-->
+                <!--                </div>-->
+
+                <div class="ui simple item dropdown stackable nav-dropdown">
+                    <img class="ui avatar image" src="../imgs/logo.png">
+                    luci  <i class="dropdown icon"></i>
+                    <div class="ui menu stackable">
+                        <a href="#" class="item">
+                            <i class="icon user"></i>
+                            个人中心
+                        </a>
+
+                        <a href="create.html" class="item">
+                            <i class="icon user"></i>
+                            写作中心
+                        </a>
+
+                        <a  class="item no-pjax" href="javascript:void(0)" data-url="#" data-method="POST" data-prompt="您确定要退出登录吗？" title="退出登录">
+                            <i class="icon sign out"></i>
+                            退出
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </nav>
+    <!--nav end-->
+
+    <div class="ui centered grid container stackable">
+        <div class="twelve wide column stacked">
+            <div class="ui segment" style="padding: 0px 6px 10px 6px;">
+                <div style="padding: 14px;">
+
+                    <pre><code class="language-css">p { color: red }</code></pre>
+
+                    <pre  class="line-numbers"><code class="language-php">
+                        class Tuyie extends Controller
+                        {
+                            var_export($foo);
+                        }
+                    </code></pre>
+
+                    <pre class="line-numbers"><code class="language-markdown">
+                        ## 我是标题
+                        #### 我是小标题
+                        **加粗**
+                    </code></pre>
+
+
+                    <pre><code class="language-go">
+                       foo := 88
+                    </code></pre>
+
+                    foo := 88
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- right sidebar start-->
+        <div class="four wide column stackable">
+            <div class="item header sidebar">
+                <div class="ui segment responsive">
+                    <div id="context2">
+                        <div class="ui secondary menu">
+                            <a class="item tiny active" data-tab="fourth"><i class="fire icon"></i>热度榜</a>
+                            <a class="item" data-tab="fifth"><i class="heart icon"></i>好评榜</a>
+                        </div>
+                        <div class="ui divider"></div>
+                        <div class="ui tab active " data-tab="fourth">
+                            <div class="ui items">
+                                <div class="item">
+                                    <i class="circular inverted red fire icon tiny"></i>
+                                    <div class="content" style="height: 25px;line-height: 25px;text-align: left;font-size: 14px;padding-left: 5px">
+                                        <a class="">一只狗的故事</a>
+                                        <span style="font-size: 12px;color: grey;display: block;float: right"><i class="eye icon grey tiny"></i>3414</span>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <i class="circular inverted orange fire icon tiny"></i>
+                                    <div class="content" style="height: 25px;line-height: 25px;text-align: left;font-size: 14px;padding-left: 5px">
+                                        <a class="">健谈</a>
+                                        <span style="font-size: 12px;color: grey;display: block;float: right"><i class="eye icon grey tiny"></i>3201</span>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <i class="circular inverted yellow fire icon tiny"></i>
+                                    <div class="content" style="height: 25px;line-height: 25px;text-align: left;font-size: 14px;padding-left: 5px">
+                                        <a class="">毛泽东语录</a>
+                                        <span style="font-size: 12px;color: grey;display: block;float: right"><i class="eye icon grey tiny"></i>2780</span>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <i class="circular inverted grey icon tiny">4</i>
+                                    <div class="content" style="height: 25px;line-height: 25px;text-align: left;font-size: 14px;padding-left: 5px">
+                                        <a class="">真实的欺骗</a>
+                                        <span style="font-size: 12px;color: grey;display: block;float: right"><i class="eye icon grey tiny"></i>2011</span>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <i class="circular inverted grey icon tiny">5</i>
+                                    <div class="content" style="height: 25px;line-height: 25px;text-align: left;font-size: 14px;padding-left: 5px">
+                                        <a class="">Redis分布式集群部署</a>
+                                        <span style="font-size: 12px;color: grey;display: block;float: right"><i class="eye icon grey tiny"></i>1441</span>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <i class="circular inverted grey icon tiny">6</i>
+                                    <div class="content" style="height: 25px;line-height: 25px;text-align: left;font-size: 14px;padding-left: 5px">
+                                        <a class="">Vue入门到放弃</a>
+                                        <span style="font-size: 12px;color: grey;display: block;float: right"><i class="eye icon grey tiny"></i>1224</span>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <i class="circular inverted grey icon tiny">7</i>
+                                    <div class="content" style="height: 25px;line-height: 25px;text-align: left;font-size: 14px;padding-left: 5px">
+                                        <a class="">钢铁是怎样练成的</a>
+                                        <span style="font-size: 12px;color: grey;display: block;float: right"><i class="eye icon grey tiny"></i>914</span>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <i class="circular inverted grey icon tiny">8</i>
+                                    <div class="content" style="height: 25px;line-height: 25px;text-align: left;font-size: 14px;padding-left: 5px">
+                                        <a class="">PHP7源码分析</a>
+                                        <span style="font-size: 12px;color: grey;display: block;float: right"><i class="eye icon grey tiny"></i>344</span>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <i class="circular inverted grey icon tiny">9</i>
+                                    <div class="content" style="height: 25px;line-height: 25px;text-align: left;font-size: 14px;padding-left: 5px">
+                                        <a class="">TCP/IP协议详解（二）</a>
+                                        <span style="font-size: 12px;color: grey;display: block;float: right"><i class="eye icon grey tiny"></i>304</span>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <i class="circular inverted grey icon tiny">10</i>
+                                    <div class="content" style="height: 25px;line-height: 25px;text-align: left;font-size: 14px;padding-left: 5px">
+                                        <a class="">Spring框架</a>
+                                        <span style="font-size: 12px;color: grey;display: block;float: right"><i class="eye icon grey tiny"></i>47</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ui tab " data-tab="fifth">
+                            <div class="ui items">
+                                <div class="item">
+                                    <i class="circular inverted red heart icon tiny"></i>
+                                    <div class="content" style="height: 25px;line-height: 25px;text-align: left;font-size: 14px;padding-left: 5px">
+                                        <a class="">一只狗的故事</a>
+                                        <span style="font-size: 12px;color: grey;display: block;float: right"><i class="comments icon grey tiny"></i>3414</span>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <i class="circular inverted orange heart icon tiny"></i>
+                                    <div class="content" style="height: 25px;line-height: 25px;text-align: left;font-size: 14px;padding-left: 5px">
+                                        <a class="">健谈</a>
+                                        <span style="font-size: 12px;color: grey;display: block;float: right"><i class="comments icon grey tiny"></i>3201</span>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <i class="circular inverted yellow heart icon tiny"></i>
+                                    <div class="content" style="height: 25px;line-height: 25px;text-align: left;font-size: 14px;padding-left: 5px">
+                                        <a class="">毛泽东语录</a>
+                                        <span style="font-size: 12px;color: grey;display: block;float: right"><i class="comments icon grey tiny"></i>2780</span>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <i class="circular inverted grey icon tiny">4</i>
+                                    <div class="content" style="height: 25px;line-height: 25px;text-align: left;font-size: 14px;padding-left: 5px">
+                                        <a class="">真实的欺骗</a>
+                                        <span style="font-size: 12px;color: grey;display: block;float: right"><i class="comments icon grey tiny"></i>2011</span>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <i class="circular inverted grey icon tiny">5</i>
+                                    <div class="content" style="height: 25px;line-height: 25px;text-align: left;font-size: 14px;padding-left: 5px">
+                                        <a class="">Vue入门到放弃</a>
+                                        <span style="font-size: 12px;color: grey;display: block;float: right"><i class="comments icon grey tiny"></i>1224</span>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <i class="circular inverted grey icon tiny">6</i>
+                                    <div class="content" style="height: 25px;line-height: 25px;text-align: left;font-size: 14px;padding-left: 5px">
+                                        <a class="">Redis分布式集群部署</a>
+                                        <span style="font-size: 12px;color: grey;display: block;float: right"><i class="comments icon grey tiny"></i>1441</span>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <i class="circular inverted grey icon tiny">7</i>
+                                    <div class="content" style="height: 25px;line-height: 25px;text-align: left;font-size: 14px;padding-left: 5px">
+                                        <a class="">TCP/IP协议详解（二）</a>
+                                        <span style="font-size: 12px;color: grey;display: block;float: right"><i class="comments icon grey tiny"></i>304</span>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <i class="circular inverted grey icon tiny">8</i>
+                                    <div class="content" style="height: 25px;line-height: 25px;text-align: left;font-size: 14px;padding-left: 5px">
+                                        <a class="">钢铁是怎样练成的</a>
+                                        <span style="font-size: 12px;color: grey;display: block;float: right"><i class="comments icon grey tiny"></i>914</span>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <i class="circular inverted grey icon tiny">9</i>
+                                    <div class="content" style="height: 25px;line-height: 25px;text-align: left;font-size: 14px;padding-left: 5px">
+                                        <a class="">PHP7源码分析</a>
+                                        <span style="font-size: 12px;color: grey;display: block;float: right"><i class="comments icon grey tiny"></i>344</span>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <i class="circular inverted grey icon tiny">10</i>
+                                    <div class="content" style="height: 25px;line-height: 25px;text-align: left;font-size: 14px;padding-left: 5px">
+                                        <a class="">Spring框架</a>
+                                        <span style="font-size: 12px;color: grey;display: block;float: right"><i class="comments icon grey tiny"></i>47</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="ui card responsive">
+                    <div class="content" style="padding: 0px;">
+                        <a class="" href="https://www.ucloud.cn/site/active/cdn-ufile.html?ytag=laravelcdn" target="_blank" style="display: block;border-top: 1px solid #d3e0e9;border-bottom: 1px solid #d3e0e9;">
+                            <img src="../imgs/02.jpeg" class="ui popover" data-variation="inverted" data-content="服务器赞助商：UCloud" width="100%">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="ui card responsive">
+                    <div class="content">
+                        <div class=" text-center">
+                            <i class="tags tiny icon"></i>热门标签
+                        </div>
+                    </div>
+
+                    <div class="content" style="">
+                        <a href="#" class="ui label blue" style="margin-top: 4px">ThinkPHP(12)</a>
+                        <a href="#" class="ui label green" style="margin-top: 4px">Yii2(8)</a>
+                        <a href="#" class="ui label orange" style="margin-top: 4px">Blog(2)</a>
+                        <a href="#" class="ui label teal" style="margin-top: 4px">漏洞s(1)</a>
+                        <a href="#" class="ui label yellow" style="margin-top: 4px">Sql注入</a>
+                        <a href="#" class="ui label olive" style="margin-top: 4px">DDOS</a>
+                        <a href="#" class="ui label violet" style="margin-top: 4px">VUE</a>
+                        <a href="#" class="ui label red" style="margin-top: 4px">Semantic</a>
+                        <a href="#" class="ui label teal" style="margin-top: 4px">Swift</a>
+                        <a href="#" class="ui label green" style="margin-top: 4px">Xcode</a>
+                        <a href="#" class="ui label yellow" style="margin-top: 4px">技巧</a>
+                        <a href="#" class="ui label orange" style="margin-top: 4px">方式</a>
+                        <a href="#" class="ui label blue" style="margin-top: 4px">队列</a>
+                    </div>
+                </div>
+
+                <div class="ui card responsive">
+                    <div class="content">
+                        <div class="text-center">
+                            <i class="bug tiny icon"></i>报个BUG
+                        </div>
+                    </div>
+
+                    <div class="content" style="">
+
+
+                        <form class="ui form">
+                            <div class="field">
+                                <label>错误类别</label>
+                                <div class="ui selection dropdown" id="error-div">
+                                    <input type="hidden" name="error_type">
+                                    <i class="dropdown icon"></i>
+                                    <div class="default text">功能异常</div>
+                                    <div class="menu">
+                                        <div class="item" data-value="1">功能异常</div>
+                                        <div class="item" data-value="1">数据错误</div>
+                                        <div class="item" data-value="0">UI错乱</div>
+                                        <div class="item" data-value="0">优化与建议</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <label>问题描述</label>
+                                <textarea rows="2"></textarea>
+                            </div>
+
+                            <div class="field">
+                                <label>QQ/微信</label>
+                                <input type="text" placeholder="QQ/微信">
+                            </div>
+
+                            <div class="ui fluid button blue" tabindex="0">提交</div>
+                        </form>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- right sidebar end-->
+    </div>
+
+    <!-- footer start -->
+    <div class="ui inverted vertical segment" style="padding-top: 6em;padding-bottom: 6em;margin-top: 4em;background: #000">
+        <div class="ui center aligned container">
+            <div class="ui stackable inverted divided grid">
+                <div class="five wide column">
+                    <h4 class="ui inverted header">关于</h4>
+                    <div class="ui inverted link list">
+                        <span class="item">蜀ICP备18023940号-1</span>
+                        <span class="item">&copy 2018-2019</span>
+                        <span class="item">Design By Lucius</span>
+                    </div>
+                </div>
+                <div class="five wide column">
+                    <h4 class="ui inverted header">统计信息</h4>
+                    <div class="ui inverted link list">
+                        <span class="item">当前在线人数：34</span>
+                        <span class="item">历史访问人数：566</span>
+                    </div>
+                </div>
+                <div class="five wide column">
+                    <h4 class="ui inverted header">联系方式</h4>
+                    <div class="ui inverted link list">
+                        <a href="#" class="item"><i class="weibo icon"></i>&nbsp;&nbsp;微博</a>
+                        <a href="#" class="item"><i class="qq icon"></i>&nbsp;&nbsp;QQ</a>
+                        <a href="#" class="item"><i class="mail icon"></i>&nbsp;&nbsp;邮件</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer end -->
+</div>
+</body>
+<!------ 登录弹层 start ------>
+<div class="ui mini modal">
+    <i class="close icon"></i>
+    <div class="five wide column">
+        <div class="ui blue padded segment">
+            <div class="content">
+                <h3 style="text-align: center">登录</h3>
+
+                <div class="ui divider"></div>
+
+                <div class="ui message warning">
+                    <i class="icon info"></i> 本站暂不开放注册哦～
+                </div>
+
+                <form class="ui form" role="form" method="POST" action="" accept-charset="UTF-8">
+                    <input type="hidden" name="remember" value="yes">
+                    <input type="hidden" name="return_back" value="no">
+
+                    <div class="field">
+                        <div class="ui left icon input">
+                            <i class="user icon"></i>
+                            <input type="text" name="email" placeholder="请输入注册邮箱" value="">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui left icon input">
+                            <i class="lock icon"></i>
+                            <input type="password" name="password" placeholder="请输入密码" value="">
+                        </div>
+                    </div>
+                    <button class="ui blue icon button fluid"> 登录 </button>
+                    <!--                    <div style="margin-top: 1rem;text-align: right">-->
+                    <!--                        <a href="#" target="_blank">-->
+                    <!--                            忘记密码?-->
+                    <!--                        </a>-->
+                    <!--                    </div>-->
+
+                    <div class="ui horizontal divider fs-tiny text-mute">
+                        第三方账号登录
+                    </div>
+                    <a class="ui red fluid button" href="#"><i class="weibo icon"></i> 微博 </a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!------ 登录弹层 end ------>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="../dist/semantic.min.js"></script>
+<script src="https://cdn.bootcss.com/Swiper/4.5.0/js/swiper.min.js"></script>
+<script src="../statics/js/pager.js"></script>
+<script src="../statics/js/prism.js"></script>
+<script type="text/javascript">
+    $(function() {
+        $('.ui.form').form({
+            inline: true,
+            // on: 'blur',
+            fields: {
+                email : {
+                    identifier: 'email',
+                    rules: [
+                        {
+                            type: 'empty',
+                            prompt: '邮箱不能为空'
+                        },
+                        {
+                            type: 'email',
+                            prompt: '请输入正确的邮箱'
+                        }
+                    ]
+                },
+                password : {
+                    identifier: 'password',
+                    rules: [
+                        {
+                            type: 'empty',
+                            prompt: '密码不能为空'
+                        },
+                        {
+                            type: 'minLength[6]',
+                            prompt: '密码至少6位'
+                        }
+                    ]
+                }
+            }
+        });
+    });
+
+    $('.menu .item').tab();
+    $('#error-div').dropdown();
+
+    var mySwiper = new Swiper(".swiper-container", {
+
+        autoplay: {
+            delay: 6000, //6秒切换一次
+        },
+        speed: 300,
+        slidesPerView: 3,
+        spaceBetween: 10,
+        slidesPerGroup: 3,
+        loop: true,
+
+        //分页索引
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true
+        },
+
+        //分页按钮
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev"
+        }
+
+    });
+
+    $('.col-sm-4').mouseover(function(){
+        mySwiper.autoplay.stop();
+    })
+
+    $('.col-sm-4').mouseout(function(){
+        mySwiper.autoplay.start();
+    })
+
+    function login() {
+        $('.ui.mini.modal').modal({blurring: true}).modal('show');
+    }
+
+    $("#pager").zPager({
+        totalData: 50,
+        htmlBox: $('#wraper'),
+        btnShow: true,
+        ajaxSetData: false
+    });
+
+    function currentPage(currentPage){
+        /*
+            触发页码数位置： Page/js/pager.js 64行
+        */
+        console.log("当前页码数：" + currentPage);
+    }
+</script>
+</html>
+

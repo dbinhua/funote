@@ -1,0 +1,63 @@
+/*推荐位css*/
+.col-sm-4{float:left;position:relative;width:33.33333333%}
+.selected-solution{height:525px;}
+.selected-solution>div{position:relative;width:1170px;margin:0 auto}
+.selected-solution .swiper-container{height:500px;width:1100px;margin-top: 20px}
+.selected-solution .layer-title{color:#393b40;padding:50px 0 30px;text-align:center;font-size:30px;letter-spacing:1.09px}
+.selected-solution .solution-cardlist{max-width:1200px;margin:20px auto 0}
+.swiper-slide,.swiper-wrapper{!important}
+.selected-solution .solution-cardlist .col-sm-4{padding:0 10px;top:0;transition:all .15s linear;box-sizing:border-box}
+.selected-solution .solution-cardlist .col-sm-4 .solution-card{height:400px;background:#fff;border-radius:6px;text-align:left;overflow:hidden;transition:all .15s linear}
+.selected-solution .solution-cardlist .col-sm-4:hover{position:relative;top:-20px;transition:all .25s linear}
+.selected-solution .solution-cardlist .col-sm-4:hover .solution-card{height:450px;box-shadow:0 10px 40px 0 rgba(0,0,0,.1);transition:all .2s linear}
+.selected-solution .solution-cardlist .col-sm-4 .solution-card img{width:auto;height:200px;transition:all .2s linear}
+.selected-solution .solution-cardlist .col-sm-4 .solution-card h3{margin:20px 30px 10px;font-size:18px;color:#252b3a;letter-spacing:.65px;text-align:left}
+.selected-solution .solution-cardlist .col-sm-4 .solution-card p{margin:0 30px;padding-bottom:30px;font-size:14px;color:#666a75;letter-spacing:.51px}
+.selected-solution .solution-cardlist .col-sm-4 .solution-card dl{margin:0 30px;overflow:visible}
+.cf:after,.cf:before{content:" ";display:table;line-height:0}
+.cf:after{clear:both}
+.selected-solution .solution-cardlist .col-sm-4 .solution-card dl dt{margin-bottom:10px;font-size:14px;color:#252b3a;letter-spacing:.51px;line-height:19px;position:relative}
+.selected-solution .solution-cardlist .col-sm-4 .solution-card dl dt:before{position:absolute;display:inline-block;left:-8px;top:7px;content:'';vertical-align:middle;width:4px;height:4px;border-radius:50%;background:#252b3a}
+.selected-solution .solution-cardlist .col-sm-4 .solution-card dl dd{float:left;width:50%;margin-bottom:6px;font-size:12px;color:#a0a2a8;letter-spacing:.44px;line-height:20px}
+.selected-solution .solution-cardlist .col-sm-4 .solution-card>span{margin:20px 30px 0;font-size:14px;display:inline-block;color:#666a75;letter-spacing:.51px;line-height:22px;opacity:0;transition:opacity .15s linear}
+.selected-solution .solution-cardlist .col-sm-4:hover .solution-card>span{opacity:1;transition:opacity .2s linear 50ms}
+/*了解更多*/
+.selected-solution .solution-cardlist .col-sm-4 .solution-card>span a span{display:inline-block;vertical-align:middle}
+.selected-solution .solution-cardlist .col-sm-4 .solution-card>span a span.arrow-f{width:13px;height:13px;background:url(../images/marketplace-selected-arrow0.svg);display:inline-block;vertical-align:middle;margin-left:5px;position:relative;transition:.3s ease-out}
+.selected-solution .solution-cardlist .col-sm-4 .solution-card>span a:hover{color:#e6c16c}
+.selected-solution .solution-cardlist .col-sm-4 .solution-card>span a:hover span.arrow-f{transform:translate(4px,0);background:url(../images/marketplace-selected-arrow2.svg)}
+/*重置swiper*/
+.swiper-container-horizontal>.swiper-pagination-bullets.solution-pagination{bottom:15px}
+.solution-pagination .swiper-pagination-bullet{width:24px;height:4px;border-radius:100px;overflow:hidden;background:#dfe1f1;border:none;cursor:pointer;content:'';display:inline-block;box-sizing:border-box;opacity:1;vertical-align:middle}
+.solution-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active{background:#f66f6a;box-sizing:border-box}
+.swiper-container-solution .swiper-button-prev{left:0;width:14.5px;height:30px;margin-top:1;background-image:url(../images/marketplace-home-arrow_big.svg);background-size:cover;transition:background-image .15s}
+.swiper-container-solution .swiper-button-next{right:0;width:14.5px;height:30px;margin-top:1;background-image:url(../images/marketplace-home-arrow_big.svg);transform:rotate(180deg);background-size:cover;transition:background-image .15s}
+.swiper-container-solution .swiper-button-next:hover,.swiper-container-solution .swiper-button-prev:hover{background-image:url(../images/marketplace-home-arrow_big_hover.svg);transition:background-image .2s}
+
+/*page css*/
+.clearfix {clear: both;}
+.clearfix:after{clear: both;content: "";display: block;height: 0;visibility: hidden;}
+.fl {float: left;}
+.fr {float: right;}
+.pager {max-width: 800px;text-align: center;margin-bottom: 30px;display: inline-block;}
+.pager a {cursor: pointer;}
+.pager a, .pager span { /* 按钮内数字 */width: 45px;height: 40px;border: 1px solid #EBEBEB;margin-left: -1px;color: #8a8a8a;display: inline-block;line-height: 40px;float: left;font-size: 15px;text-decoration: none;margin: 0 2px;border-radius: 6px;}
+.pager a:hover, .pager span:hover {border-color: #3897cd;color: #3897cd;position: relative;z-index: 1;}
+.pager span.current {background-color: #222A35;color: #fff;border-color: #EBEBEB;position: relative;z-index: 1;}
+.pager .pg-first, .pager .pg-prev, .pager .pg-next, .pager .pg-last {background: white url(../images/page_bg.jpg)  8px 7px no-repeat;}
+.pager .pg-first:hover, .pager .pg-prev:hover, .pager .pg-next:hover, .pager .pg-last:hover {background: white url(../images/page_bg_hover.jpg)  8px 7px no-repeat;}
+.pager .pg-prev, .pager .pg-prev:hover {background-position: 7px -21px;}
+.pager .pg-next, .pager .pg-next:hover {background-position: -21px -21px;}
+.pager .pg-last, .pager .pg-last:hover {background-position: -21px 7px;}
+.pager .pg-prev[disabled='true'], .pager .pg-prev[disabled='true']:hover {cursor: default;background-image: url(../images/page_bg.jpg);}
+.pager .pg-next[disabled='true'], .pager .pg-next[disabled='true']:hover {cursor: default;background-image: url(../images/page_bg.jpg);}
+.pager .pg-prev[disabled='true'], .pager .pg-next[disabled='true'] {border-color: #eeeeee;}
+.pager span.els {border-color: transparent;}
+.pagerHtmlWrap {width: 800px;margin: 30px auto;}
+.pagerHtmlWrap .cc_cells {width: 100%;height: 35px;padding: 5px 0;border-bottom: 1px #cccccc solid;}
+.pagerHtmlWrap .cc_cells a {color: #454545;font-size: 14px;line-height: 35px;text-decoration: none;}
+.pagerHtmlWrap .cc_cells a span {display: inline-block;width: 25%;text-align: left;margin: 0;}
+
+/*custom css*/
+.nav {padding-left: 22px;display: -webkit-box !important;display: -ms-flexbox !important;display: flex !important;-webkit-box-align: center;-ms-flex-align: center;align-items: center;margin-right: 5px;}
+.nav-dropdown {padding: 8.5px 16px !important;}
