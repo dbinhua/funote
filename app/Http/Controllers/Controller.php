@@ -21,7 +21,7 @@ class Controller extends BaseController
     {
         $this->middleware(function ($request, $next) {
             $this->user = $request->user();
-            $this->user->avatar = $this->handleAvatarImg($this->user->avatar);
+            $this->user && $this->user->avatar = $this->handleAvatarImg($this->user->avatar);
             View::share('userInfo', $this->user);
             return $next($request);
         });
