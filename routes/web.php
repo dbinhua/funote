@@ -44,6 +44,6 @@ Route::prefix('api')->middleware('auth')->group(function (){
 });
 
 //更新日志
-//Route::get('updatelog/{module}', 'UpdateLogController@index')->name('updatelog.chat');
+Route::get('devlog/{module}', 'DevLogController@index')->name('devlog.chat');
 //Route::get('wiki', 'IndexController@wiki')->name('wiki');
 //Route::get('blog','BlogController@index')->name('blog');

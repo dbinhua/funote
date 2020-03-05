@@ -72,7 +72,7 @@
                         <a class="item"><i class="address book large icon none-margin"></i></a>
                     </div>
                     <div style="position: absolute;left:0;bottom: 0;text-align: center;width: 100%">
-                        <a class="item" href="{{ route('updatelog.chat',['chat']) }}" target="_blank">V0.4</a>
+                        <a class="item" href="{{ route('devlog.chat', 'chat') }}" target="_blank">V0.4</a>
                     </div>
                 </div>
             </div>
