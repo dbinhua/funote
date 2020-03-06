@@ -10,7 +10,7 @@ var data = {
     current_chat_id: '',    //当前所在会话id
     user_id: userinfo ? userinfo.id : 0,      //用户uid
     name: userinfo ? userinfo.name : '游客' + timestamp,   //用户名
-    avatar: userinfo ? userinfo.avatar : '../../images/default_face.png'    //头像
+    avatar: userinfo ? userinfo.avatar : '../../images/default_avatar.png'    //头像
 };
 
 function initWebSocket(){
@@ -46,7 +46,6 @@ function wsOpen() {
 function wsMessage() {
     ws.onmessage = function (event) {
         var serv_data = JSON.parse(event.data);
-
         switch(serv_data.code){
             case 200:  //服务器连接成功
                 initChat(serv_data.chat_list);     //初始化会话列表 & 聊天窗口

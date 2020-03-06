@@ -57,7 +57,7 @@
                     @auth
                         <img class="ui avatar rounded mini image" src="{{ Auth::user()->avatar }}">
                     @else
-                        <img class="ui avatar rounded mini image" src="{{ asset('images/default_face.png') }}">
+                        <img class="ui avatar rounded mini image" src="{{ asset('images/default_avatar.png') }}">
                     @endauth
                 </div>
                 <div class="ui vertical text menu" style="width: 80%;text-align: center">

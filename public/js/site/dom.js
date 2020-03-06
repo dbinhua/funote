@@ -21,7 +21,7 @@ function at_content_member(data){
 function chatlists_new(data,is_none,index){
     var arr = [];
     if (index == 0){
-        arr = ['<div class="conv-lists chat-active" id="conv-lists-',data.id,'" style="border-bottom: #eeeeee .5px solid;display:',is_none,'" onclick="selectTarget(\'conv-lists-',data.id,'\',',data.id,')"><div class="list-item conv-item context-menu conv-item-company"><i class="iconfont icon-delete-conv tipper-attached"></i><div class="avatar-wrap"><div class="group-avatar"><div><img class="ui rounded mini image" src=" ../../images/img01.jpg"></div></div></div><div class="conv-item-content"><div class="title-wrap info"><div class="name-wrap"><p class="name">',data.title,'</p></div><span class="time">上午 10:29</span></div></div></div></div>'];
+        arr = ['<div class="conv-lists chat-active" id="conv-lists-',data.id,'" style="border-bottom: #eeeeee .5px solid;display:',is_none,'" onclick="selectTarget(\'conv-lists-',data.id,'\',',data.id,')"><div class="list-item conv-item context-menu conv-item-company"><i class="iconfont icon-delete-conv tipper-attached"></i><div class="avatar-wrap"><div class="group-avatar"><div><img class="ui rounded mini image" src=" ../../images/personal.png"></div></div></div><div class="conv-item-content"><div class="title-wrap info"><div class="name-wrap"><p class="name">',data.title,'</p></div><span class="time">上午 10:29</span></div></div></div></div>'];
     }else{
         arr = ['<div class="conv-lists" id="conv-lists-',data.id,'" style="border-bottom: #eeeeee .5px solid;display:',is_none,'" onclick="selectTarget(\'conv-lists-',data.id,'\',',data.id,')"><div class="list-item conv-item context-menu conv-item-company"><i class="iconfont icon-delete-conv tipper-attached"></i><div class="avatar-wrap"><div class="group-avatar"><div><img class="ui rounded mini image" src="../../images/img01.jpg"></div></div></div><div class="conv-item-content"><div class="title-wrap info"><div class="name-wrap"><p class="name">',data.title,'</p></div><span class="time">上午 10:29</span></div></div></div></div>'];
     }
@@ -47,7 +47,7 @@ function render(template,params){
                 '<div style="display: block;" class="msg-box"><div class="chat-item not-me"><div class="chat-profile-info clearfix"><span class="profile-wrp"><span class="name clearfix"><span class="name-text">',params.name,'</span></span></span><span class="chat-time">',params.time,'</span></div><div class="clearfix"><div class="avatar"><div class="normal user-avatar" onclick="chat.remind(this)" fd="',params.fd,'" uname="',params.name,'" style="background-image: url(\'',params.avatar,'\');"></div></div><div class="msg-bubble-box"><div class="msg-bubble-area"><div class="msg-bubble"><pre class="text">',params.newmessage,'</pre></div></div></div></div></div></div>'
             ];
         break;
-        
+
         case 'newlogin':
             arr = [
                 '<div class="chat-status chat-system-notice">',params.name,'&nbsp;加入群聊</div>'
