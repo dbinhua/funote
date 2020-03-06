@@ -3,7 +3,7 @@
 @section('content')
     <div class="ui centered grid container stackable">
         <div class="twelve wide column stacked">
-            <div class="ui segment" style="height: 300px;background-image: url(../../../images/personal.png);background-size: cover;border:0px;position:relative;">
+            <div class="ui segment" style="height: 300px;background-image: url({{ asset('images/personal.png') }});background-size: cover;border:0px;position:relative;">
                 <div style="position:absolute; top:30%; right:0; left:0;text-align: center;">
                     <div class="ui circular image" id="avatar_div" style="border: 2px solid beige;display: inline-block;">
                         <div class="ui dimmer">

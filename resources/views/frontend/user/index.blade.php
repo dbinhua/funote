@@ -3,7 +3,7 @@
 @section('content')
     <div class="ui centered grid container stackable">
         <div class="twelve wide column stacked">
-            <div class="ui segment" style="height: 300px;background-image: url(../../../images/personal.png);background-size: cover;border:0px;position:relative;">
+            <div class="ui segment" style="height: 300px;background-image: url({{ asset('images/personal.png') }});background-size: cover;border:0px;position:relative;">
                 @if(Auth::check() && Auth::user()->id == $user_info->id)
                 <a class="ui blue right ribbon label" href="{{ route('user.edit') }}"><i class="edit icon"></i>编辑资料</a>
                 @endif
