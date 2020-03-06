@@ -1,8 +1,8 @@
 * text=auto
 *.jpg -text
 *.png -text
-*.css linguist-vendored
+*.css linguist-language=PHP
 *.scss linguist-vendored
 *.js linguist-vendored
-*.php linguist-language=Lavarel
+*.php linguist-language=PHP
 CHANGELOG.md export-ignore
