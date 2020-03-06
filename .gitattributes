@@ -1,8 +1,9 @@
 * text=auto
 *.jpg -text
 *.png -text
+*.php linguist-language=PHP
 *.css linguist-language=PHP
 *.scss linguist-vendored
 *.js linguist-vendored
-*.php linguist-language=PHP
+
 CHANGELOG.md export-ignore
