@@ -43,12 +43,12 @@ class User extends Model
 
     public function updateInfo(array $data)
     {
-        $this->user['name'] = $data['name'];
-        $this->user['gender'] = $data['gender'];
-        $this->user['profession'] = $data['profession'];
-        $this->user['constellation'] = $data['constellation'];
-
-        return $this->user->save();
+        $user = new User();
+        $userInfo = $user->getInfoById($this->user['id']);
+        foreach ($data as $key => $val){
+            $userInfo->{$key} = $val;
+        }
+        return $userInfo->save();
     }
 
     public function uploadImg($file)
