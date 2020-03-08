@@ -74,7 +74,7 @@
                                 <a href="{{ route('article.edit') }}" class="item">
                                     <i class="icon pencil alternate"></i> 写作中心
                                 </a>
-                                <a href="{{ route('manager') }}" class="item">
+                                <a href="{{ route('admin.home') }}" target="_blank" class="item">
                                     <i class="icon wrench"></i> 管理中心
                                 </a>
                             @endif

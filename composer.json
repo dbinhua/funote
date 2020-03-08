@@ -12,6 +12,7 @@
         "ext-json": "*",
         "barryvdh/laravel-cors": "^0.11.4",
         "doctrine/dbal": "^2.10",
+        "encore/laravel-admin": "^1.7",
         "erusev/parsedown": "^1.7",
         "fideloper/proxy": "^4.0",
         "guzzlehttp/guzzle": "~6.0",
