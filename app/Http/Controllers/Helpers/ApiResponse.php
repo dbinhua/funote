@@ -13,7 +13,7 @@ trait ApiResponse
         $res = ['code' => $this->code];
 
         if ($this->code == FoundationResponse::HTTP_OK){
-            $data && $res['data'] = $data;
+            $data && $res['results'] = $data;
         }else{
             $res['msg'] = $msg;
         }

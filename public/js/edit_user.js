@@ -21,7 +21,7 @@ function upload_avatar(){
         contentType: false,   //form已经申明了，所以这里设置为false
         processData: false,   //data是formdata，不需要对数据做处理
         success: function(data){
-            upload_res = data.data.result;
+            upload_res = data.results.result;
         }
     });
 }
@@ -58,7 +58,7 @@ $('#info_button').api({
     url: '/api/user/update',
     method: 'POST',
     onSuccess: function (response) {
-        if(response.data.result === true){
+        if(response.results.result === true){
             $('#info_tip')[0].classList.add('positive');
             $('#info_tip')[0].innerHTML = '<p style="text-align: center">修改成功</p>';
         }else{

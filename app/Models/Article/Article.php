@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models;
+namespace App\Models\Article;
 
 use QCod\ImageUp\HasImageUploads;
 use Illuminate\Database\Eloquent\Model;
@@ -35,10 +35,15 @@ class Article extends Model
             $this->{$key} = $item;
         }
 
-        $res = $this->save();
+        $this->save();
         $this->article_id = $this->id;
 
-        return $res;
+        return $this->getId();
+    }
+
+    public function getId()
+    {
+        return $this->article_id;
     }
 
     /**

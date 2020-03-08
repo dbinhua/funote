@@ -67,14 +67,14 @@ $('#article_form').form({
 function checkSlug(slug, article_id = 0){
     if (slug){
         $.ajax({
-            url: "/api/checkSlug",
+            url: "/api/article/checkSlug",
             type: 'POST',
             data: {
                 slug: slug,
                 id: article_id
             },
             success: function(data){
-                if(data.data.result === 1){
+                if(data.results.result === 1){
                     $('#article_form').form('add prompt', "slug", "当前别名已被占用");
                 }
             }
@@ -82,7 +82,19 @@ function checkSlug(slug, article_id = 0){
     }
 }
 
-$('#tags').dropdown();
+$('#tags-div').dropdown({
+    allowAdditions: true,
+    apiSettings: {
+        url: '/api/article/tags/{query}',
+        throttle: 500    //请求间隔时间
+    },
+    fields: {
+        value: 'slug'
+    },
+    filterRemoteData: true,
+    saveRemoteData: false
+});
+
 $('#cates').dropdown();
 $('#attr').dropdown();
 $('#is_top').checkbox();

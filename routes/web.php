@@ -15,8 +15,8 @@ Route::get('chat', 'ChatController@index')->name('chat');
 
 //写作中心
 Route::prefix('article')->middleware('auth')->group(function (){
-    Route::get('create', 'ArticleController@writingPage')->name('article.edit');
-    Route::post('create', 'ArticleController@create')->name('article.create');
+    Route::get('create', 'ArticleController@getCreate')->name('article.edit');
+    Route::post('create', 'ArticleController@postCreate')->name('article.create');
 });
 
 //个人中心
@@ -26,15 +26,13 @@ Route::prefix('user')->middleware('auth')->group(function (){
 });
 Route::get('user/{id}', 'UserController@index')->name('user');
 
-//管理中心
-Route::prefix('manager')->middleware('auth')->group(function (){
-    Route::get('/', 'ManagerController@index')->name('manager');
-});
-
 //api
 Route::prefix('api')->middleware('auth')->group(function (){
     //写作中心
-    Route::post('checkSlug', 'ArticleController@checkSlug');
+    Route::prefix('article')->group(function (){
+        Route::post('checkSlug', 'ArticleController@checkSlug');
+        Route::get('tags/{tagName}', 'ArticleController@searchTagsByName');
+    });
 
     //个人中心
     Route::prefix('user')->group(function (){

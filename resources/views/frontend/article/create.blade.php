@@ -65,19 +65,12 @@
                     </div>
 
                     <div class="field">
-                        <label>标签</label>
-                        <div class="ui fluid multiple search selection dropdown" id="tags">
+                        <label>选择标签（Tab 键可创建新标签）</label>
+                        <div class="ui search multiple selection dropdown" id="tags-div">
                             <input type="hidden" name="tags">
                             <i class="dropdown icon"></i>
-                            <div class="default text">选择标签（选填）</div>
-                            <div class="menu">
-                                <div class="item" data-value="jenny" data-text="Jenny"> Jenny Hess </div>
-                                <div class="item" data-value="elliot" data-text="Elliot"> Elliot Fu </div>
-                                <div class="item" data-value="stevie" data-text="Stevie"> Stevie Feliciano </div>
-                                <div class="item" data-value="christian" data-text="Christian"> Christian </div>
-                                <div class="item" data-value="matt" data-text="Matt"> Matt </div>
-                                <div class="item" data-value="justen" data-text="Justen"> Justen Kitsune </div>
-                            </div>
+                            <input type="text" class="search">
+                            <div class="default text">请选择标签（选填）</div>
                         </div>
                     </div>
 
