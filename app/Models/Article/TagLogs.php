@@ -6,13 +6,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class TagLogs extends Model
 {
+    protected $fillable = ['tag_id', 'article_id'];
+
     const LIMIT = 10;
 
-    public function createLogs(int $articleId, int $tagId)
+    public function createLogs(int $tag_id, int $article_id)
     {
-        $this->tag_id = $tagId;
-        $this->article_id = $articleId;
-        return $this->save();
+        return $this->firstOrCreate(compact('tag_id', 'article_id'));
     }
 
     /**

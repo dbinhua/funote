@@ -54,14 +54,23 @@ class ArticleController extends Controller
 
     public function detail(User $user, Article $article, $slug)
     {
+        $tagLogsModel = new TagLogs();
+        $tagModel = new Tag();
+
         $info = $article->getArticleBySlug($slug);
         if ($info){
             $info['html'] = json_decode($info['html']);
-
             $user_info = $user->getInfoById($info['user_id']);
             $user_info['avatar'] = $this->handleAvatarImg($user_info['avatar']);
-            return view('frontend.article.detail', compact('info','user_info'));
+
+            $tagLogs = $tagLogsModel->getLogs(0, $info['id']);
+            $tags = [];
+            foreach ($tagLogs as $tagLog){
+                $tagInfo = $tagModel->getTagInfo($tagLog->tag_id);
+                $tags[] = $tagInfo;
+            }
         }
+        return view('frontend.article.detail', compact('info','user_info', 'tags'));
     }
 
     public function handleArticleTags(int $articleId, array $tags)
@@ -79,11 +88,8 @@ class ArticleController extends Controller
                 $tag_id = $tagModel->createTag($newTag);
             }
 
-            //检查文章是否已经有该标签
-            $logs = $tagLogModel->getLogs($tag_id, $articleId);
-            if ($logs->isEmpty()){
-                $tagLogModel->createLogs($articleId, $tag_id);
-            }
+            //给文章打标签
+            $tagLogModel->createLogs($tag_id, $articleId);
         }
     }
 

@@ -10,11 +10,12 @@ class Tag extends Model
 
     public function createTag(TagInfo $tagInfo)
     {
+        $new = new Tag();
         foreach ($tagInfo as $key => $item){
-            $this->{$key} = $item;
+            $new->{$key} = $item;
         }
-        $this->save();
-        $this->tag_id = $this->id;
+        $new->save();
+        $this->tag_id = $new->id;
         return $this->getId();
     }
 
@@ -50,5 +51,10 @@ class Tag extends Model
             $tag = $this->where('slug', '=', $slug)->first();
         }
         return $tag;
+    }
+
+    public function getTagInfo(int $tagId)
+    {
+        return $this->whereId($tagId)->first();
     }
 }

@@ -16,17 +16,17 @@
                         <span><i class="thumbs up outline icon"></i> 23</span>
                         <span class="divider">&nbsp;&nbsp;/&nbsp;&nbsp;</span>
                         <span><i class="icon comments outline small"></i> 4</span>
-
-
                     </p>
                     <div class="ui divider"></div>
                     {!! $info['html'] !!}
+                    @if($tags)
                     <div class="meta" style="margin: 35px 0px;">
                         <i class="icon tags"></i>
-                        <a class="ui label small blue" href="#">laravel</a>
-                        <a class="ui label small blue" href="#">laradock</a>
-                        <a class="ui label small blue" href="#">docker</a>
+                        @foreach($tags as $tag)
+                            <a class="ui label small blue" href="#">{{ $tag['name'] }}</a>
+                        @endforeach
                     </div>
+                    @endif
 
                     <div class="ui horizontal list">
                         <a class="popover item ui" data-content="关注主题，当评论和附言创建时将会被通知" href="javascript:void(0);" data-url="#" data-id="">
