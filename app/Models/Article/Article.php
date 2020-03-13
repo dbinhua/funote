@@ -59,13 +59,29 @@ class Article extends Model
             $article = $this->where([
                 ['slug', '=', $slug],
                 ['publish_at', '<=', $timestamp]
-            ])->first();
+            ])->firstOrFail();
         }elseif ($status == self::Draft){
             $article = $this->where([
                 ['slug', '=', $slug],
                 ['publish_at', '=', null]
-            ])->first();
+            ])->firstOrFail();
         }
         return $article;
+    }
+
+    public function getArticleByIds(array $articleIds, string $status = self::Publish)
+    {
+        $timestamp = date('Y-m-d H:i:s', time());
+
+        if ($status == self::Publish){
+            $articles = $this->where([
+                ['publish_at', '<=', $timestamp]
+            ])->whereIn('id', $articleIds)->limit(5)->get();
+        }elseif ($status == self::Draft){
+            $articles = $this->where([
+                ['publish_at', '=', null]
+            ])->whereIn('id', $articleIds)->limit(5)->get();
+        }
+        return $articles;
     }
 }

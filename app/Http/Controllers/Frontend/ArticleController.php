@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Article\Tag;
 use App\Models\Article\TagInfo;
 use App\Models\Article\TagLogs;
+use App\Models\Tool\Timer;
 use App\Models\User\User;
 use App\Models\User\UserRank;
 use Illuminate\Http\Request;
@@ -54,23 +55,31 @@ class ArticleController extends Controller
 
     public function detail(User $user, Article $article, $slug)
     {
+        $time = new Timer();
         $tagLogsModel = new TagLogs();
         $tagModel = new Tag();
 
         $info = $article->getArticleBySlug($slug);
         if ($info){
             $info['html'] = json_decode($info['html']);
+            $info['tranTime'] = $time->tranTime($info['created_at']);
+
             $user_info = $user->getInfoById($info['user_id']);
             $user_info['avatar'] = $this->handleAvatarImg($user_info['avatar']);
 
             $tagLogs = $tagLogsModel->getLogs(0, $info['id']);
-            $tags = [];
+            $tags = $articleIds = [];
             foreach ($tagLogs as $tagLog){
                 $tagInfo = $tagModel->getTagInfo($tagLog->tag_id);
                 $tags[] = $tagInfo;
+                $recom_tagLogs = $tagLogsModel->getLogs($tagLog->tag_id);
+                foreach ($recom_tagLogs as $log){
+                    $articleIds[] = $log->article_id;
+                }
             }
+            $recommend_articles = $article->getArticleByIds($articleIds);
         }
-        return view('frontend.article.detail', compact('info','user_info', 'tags'));
+        return view('frontend.article.detail', compact('info','user_info', 'tags', 'recommend_articles'));
     }
 
     public function handleArticleTags(int $articleId, array $tags)

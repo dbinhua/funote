@@ -29,7 +29,7 @@ class ThirdUser extends Model
 
     public function getInfo(int $uid, int $type)
     {
-        return $this->where(compact('uid', 'type'))->first();
+        return $this->where(compact('uid', 'type'))->firstOrFail();
     }
 
     public function getInfoById(int $id)

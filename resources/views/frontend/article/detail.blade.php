@@ -7,8 +7,8 @@
                 <div style="padding: 13px;">
                     <h1 class="ui header center aligned">{{ $info['title'] }}</h1>
                     <p style="margin-bottom: 10px;text-align: center;">
-                        <a data-tooltip="2019-12-07 06:40:36">
-                            <i class="icon clock outline small"></i>  <span>7小时前</span>
+                        <a data-tooltip="{{ $info['created_at'] }}">
+                            <i class="icon clock outline small"></i><span>{{ $info['tranTime'] }}</span>
                         </a>
                         <span class="divider">&nbsp;&nbsp;/&nbsp;&nbsp;</span>
                         <span><i class="icon star outline small"></i> 16</span>
@@ -50,13 +50,15 @@
                         <i class="icon check green"></i> 推荐文章：
                     </h4>
 
+                    @if(count($recommend_articles))
                     <div class="ui middle aligned divided list">
+                        @foreach($recommend_articles as $item)
                         <div class="item" style="height: 60px;">
                             <img class="ui avatar image" src="{{ asset('imgs/logo.png') }}">
                             <div class="content" style="width: 80%;">
                                     <span class="header" style="line-height: 57px;">
                                         <span class="ui label red">置顶</span>
-                                        <a>新课程发布：《Laravel 性能优化入门》</a>
+                                        <a href="{{ route('detail', $item['slug']) }}">{{ $item['title'] }}</a>
                                     </span>
                             </div>
                             <div class="content" style="width: 16%;float: right;text-align: right;font-size: 10px;line-height: 57px;color: #C1C1C2">
@@ -66,69 +68,9 @@
                                     </span>
                             </div>
                         </div>
-
-                        <div class="item" style="height: 60px;">
-                            <img class="ui avatar image" src="../imgs/logo.png">
-                            <div class="content" style="width: 80%;">
-                                    <span class="header" style="line-height: 53px;">
-                                        <span class="ui label grey">转载</span>
-                                        <a>短链的秘密 --来自掘金专栏</a>
-                                    </span>
-                            </div>
-                            <div class="content" style="width: 16%;float: right;text-align: right;font-size: 10px;line-height: 57px;color: #C1C1C2">
-                                    <span>
-                                        <i class="heart outline icon"></i>15
-                                        <span>&nbsp;|&nbsp;刚刚</span>
-                                    </span>
-                            </div>
-                        </div>
-                        <div class="item" style="height: 60px;">
-                            <img class="ui avatar image" src="../imgs/logo.png">
-                            <div class="content" style="width: 80%;">
-                                    <span class="header" style="line-height: 53px;">
-                                        <span class="ui label grey">转载</span>
-                                        <a>短链的秘密 --来自掘金专栏</a>
-                                    </span>
-                            </div>
-                            <div class="content" style="width: 16%;float: right;text-align: right;font-size: 10px;line-height: 57px;color: #C1C1C2">
-                                    <span>
-                                        <i class="heart outline icon"></i>15
-                                        <span>&nbsp;|&nbsp;刚刚</span>
-                                    </span>
-                            </div>
-                        </div>
-                        <div class="item" style="height: 60px;">
-                            <img class="ui avatar image" src="../imgs/logo.png">
-                            <div class="content" style="width: 80%;">
-                                    <span class="header" style="line-height: 53px;">
-                                        <span class="ui label grey">转载</span>
-                                        <a>短链的秘密 --来自掘金专栏</a>
-                                    </span>
-                            </div>
-                            <div class="content" style="width: 16%;float: right;text-align: right;font-size: 10px;line-height: 57px;color: #C1C1C2">
-                                    <span>
-                                        <i class="heart outline icon"></i>15
-                                        <span>&nbsp;|&nbsp;刚刚</span>
-                                    </span>
-                            </div>
-                        </div>
-
-                        <div class="item" style="height: 60px;">
-                            <img class="ui avatar image" src="../imgs/02.jpeg">
-                            <div class="content" style="width: 80%;">
-                                    <span class="header" style="line-height: 57px;">
-                                        <span class="ui label grey">转载</span>
-                                        <a>短链的秘密 --来自掘金专栏</a>
-                                    </span>
-                            </div>
-                            <div class="content" style="width: 16%;float: right;text-align: right;font-size: 10px;line-height: 57px;color: #C1C1C2">
-                                    <span>
-                                        <i class="heart outline icon"></i>15
-                                        <span>&nbsp;|&nbsp;刚刚</span>
-                                    </span>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
+                    @endif
                 </div>
             </div>
         </div>

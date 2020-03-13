@@ -38,7 +38,7 @@ class User extends Model
 
     public function getInfoById(int $user_id)
     {
-        return $this->whereId($user_id)->first();
+        return $this->whereId($user_id)->firstOrFail();
     }
 
     public function updateInfo(array $data)

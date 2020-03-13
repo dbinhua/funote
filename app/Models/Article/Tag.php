@@ -55,6 +55,6 @@ class Tag extends Model
 
     public function getTagInfo(int $tagId)
     {
-        return $this->whereId($tagId)->first();
+        return $this->whereId($tagId)->firstOrFail();
     }
 }
