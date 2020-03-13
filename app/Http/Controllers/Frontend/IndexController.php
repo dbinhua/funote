@@ -12,11 +12,11 @@ class IndexController extends Controller
         $recommend_slugs = ['one','er','san'];
         $recommend_data = [];
         foreach ($recommend_slugs as $recommend_slug){
-            $info = $article->getArticleBySlug($recommend_slug);
-            if (!$info) continue;
-            $info['html'] = json_decode($info['html']);
-            $info['cover'] = $this->handleCoverImg($info['cover']);
-            $recommend_data[] = $info;
+//            $info = $article->getArticleBySlug($recommend_slug);
+//            if (!$info) continue;
+//            $info['html'] = json_decode($info['html']);
+//            $info['cover'] = $this->handleCoverImg($info['cover']);
+//            $recommend_data[] = $info;
         }
 
         return view('frontend.index', compact('recommend_data'));
