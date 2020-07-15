@@ -36,29 +36,26 @@ class WeiboAuthController extends Controller
 
     public function index(Request $request)
     {
-        $param = [
+        $param = http_build_query([
             'client_id' => env('WEIBO_APP_KEY'),
             'response_type' => 'code',
             'redirect_uri' => route('weibo.rollback'),
-            'state' => $request->input('refer') ?? ''
-        ];
-        $param = http_build_query($param);
-
+            'state' => $request->input('refer', '')
+        ]);
         return redirect(self::AuthorizeApi.$param);
     }
 
     public function rollback(Request $request)
     {
-        $res = $request->only('state','code');
+        $res = $request->only('state', 'code');
         $this->redirectUrl = $res['state'] ?? route('index');
-        $param = [
+        $param = http_build_query([
             'client_id' => env('WEIBO_APP_KEY'),
             'client_secret' => env('WEIBO_CLIENT_SECRET'),
             'grant_type' => 'authorization_code',
             'code' => $res['code'] ?? '',
-            'redirect_uri' => $res['state'] ?? route('index')
-        ];
-        $param = http_build_query($param);
+            'redirect_uri' => $this->redirectUrl
+        ]);
 
         $response = $this->client->post(self::AccessTokenApi.$param);
         if ($response->getStatusCode() == 200){
@@ -66,50 +63,39 @@ class WeiboAuthController extends Controller
             $data = json_decode($data);
             $this->accessToken = $data->access_token;
             $this->uid = $data->uid;
-            try {
-                $this->createOrUpdateThirdUser();
-            } catch (GuzzleException $e) {
-
-            }
+            $this->createOrUpdateThirdUser();
         }
         return redirect($this->redirectUrl);
     }
 
     /**
      * 写入或修改第三方登录用户信息
-     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function createOrUpdateThirdUser()
     {
         $thirdUser = new ThirdUser();
-
-        $param = [
+        $param = http_build_query([
             'access_token' => $this->accessToken,
             'uid' => $this->uid
-        ];
-        $param = http_build_query($param);
+        ]);
 
-        try{
-            $info = $this->client->get(self::UserInfoApi.$param);
-            if ($info->getStatusCode() == 200){
-                $info = $info->getBody()->getContents();
-                $info = json_decode($info);
+        $info = $this->client->get(self::UserInfoApi.$param);
+        if ($info->getStatusCode() == 200){
+            $info = $info->getBody()->getContents();
+            $info = json_decode($info);
 
-                $third_info = new ThirdUserInfo();
-                $third_info->uid = $info->id;
-                $third_info->type = ThirdUser::WEIBO;
-                $third_info->nickname = $info->screen_name;
-                $third_info->gender = $info->gender == 'm' ? 1 : ($info->gender == 'f' ? 2 : 0);
-                $third_info->avatar = $info->profile_image_url;
-                $third_info->avatar_large = $info->avatar_large;
-                $third_info->access_token = $this->accessToken;
-                $res = $thirdUser->createOrUpdateThirdUser($this->filterObjectNullAttr($third_info));
-                if ($res && $bind_id = $this->bindAccount($third_info)){
-                    Auth::loginUsingId($bind_id, true);
-                }
+            $third_info = new ThirdUserInfo();
+            $third_info->uid = $info->id;
+            $third_info->type = ThirdUser::WEIBO;
+            $third_info->nickname = $info->screen_name;
+            $third_info->gender = $info->gender === 'm' ? 1 : ($info->gender === 'f' ? 2 : 0);
+            $third_info->avatar = $info->profile_image_url;
+            $third_info->avatar_large = $info->avatar_large;
+            $third_info->access_token = $this->accessToken;
+            $res = $thirdUser->createOrUpdateThirdUser($this->filterObjectNullAttr($third_info));
+            if ($res && $bind_id = $this->bindAccount($third_info)){
+                Auth::loginUsingId($bind_id, true);
             }
-        }catch (\Exception $exception){
-            return redirect($this->redirectUrl);
         }
     }
 
