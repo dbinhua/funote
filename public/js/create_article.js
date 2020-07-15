@@ -100,14 +100,12 @@ $('#attr').dropdown();
 $('#is_top').checkbox();
 $('#cover_div .image').dimmer({on: 'hover'});
 
-var simplemde = new SimpleMDE({
-    toolbar: ["bold", "italic", "heading", "|", "quote", "code", "table", "unordered-list", "ordered-list", "|", "link", "image", "|", "side-by-side", "fullscreen"],
-    autosave: {
-        enabled: true,
-        uniqueId: "article-unique-id",
-        delay: 15000,
+var editor = editormd("editormd", {
+    height  : 540,
+    path : '../editormd/lib/',
+    toolbarIcons : function() {
+        return editormd.toolbarModes['myeditor']
     },
-    element: $('#body-field')[0]
 });
 
 function upload_cover() {

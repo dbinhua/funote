@@ -89,7 +89,7 @@
         myeditor : [
             "h2", "h3", "|",
             "quote", "list-ul", "list-ol", "hr", "|",
-            "link", "reference-link", "code", "code-block", "table", "html-entities", "|",
+            "link", "reference-link", "code", "code-block", "html-entities", "|",
             "watch", "preview", "|",
         ]
     };

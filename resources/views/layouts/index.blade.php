@@ -21,7 +21,7 @@
     @endif
 
     <link rel="stylesheet" type="text/css" href="{{ asset('css/markdown/prism.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/markdown/simplemde.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('editormd/css/editormd.css') }}">
 </head>
 <body>
 <div class="container">
@@ -111,10 +111,10 @@
 <script src="{{ asset('js/site/count_ws.js') }}"></script>
 <script src="{{ asset('js/site/semantic.min.js') }}"></script>
 <script src="{{ asset('js/pager.min.js') }}"></script>
+<script src="{{ asset('editormd/editormd.js') }}"></script>
 @if(Route::is('index'))
     <script src="https://cdn.bootcss.com/Swiper/4.5.0/js/swiper.min.js"></script>
 @endif
-
 
 @yield('js')
 

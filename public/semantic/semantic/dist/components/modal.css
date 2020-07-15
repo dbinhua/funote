@@ -222,7 +222,7 @@
     padding-right: 2.25rem;
   }
   .ui.modal > .close {
-    top: 1.0535rem;
+    top: 1.5535rem;
     right: 1rem;
     color: #636b6f;
   }
@@ -443,7 +443,7 @@
   padding-right: 2.25rem;
 }
 .ui.fullscreen.modal > .close {
-  top: 1.0535rem;
+  top: 1.5535rem;
   right: 1rem;
   color: #636b6f;
 }

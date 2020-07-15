@@ -4,11 +4,10 @@ namespace App\Http\Controllers\Api\Frontend;
 
 use Illuminate\Http\Request;
 use App\Http\Requests\Api\LoginRequest;
-use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use App\User;
 
-class authController extends FrontendAPIController
+class AuthController extends FrontendAPIController
 {
     /*
      * 用户注册

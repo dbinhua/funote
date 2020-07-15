@@ -1,6 +1,43 @@
 @extends('layouts.index')
 @section('title', $info['title'])
 @section('content')
+    <style>
+         blockquote {
+             color: #666;
+             border-left: none;
+             background-color: #f5f8fc;
+             padding: 1rem;
+             margin-left: 0;
+             margin-right: 0;
+             font-size: 14px;
+             font-style: italic;
+         }
+
+        li {
+            margin-bottom: 14px;
+        }
+
+        p > code, li > code {
+            background: rgba(90,87,87,0);
+            margin: 5px;
+            color: #858080;
+            border-radius: 4px;
+            background-color: #f9fafa;
+            border: 1px solid #e4e4e4;
+            max-width: 740px;
+            overflow-x: auto;
+            font-size: 14px;
+            padding: 1px 5px;
+        }
+
+        pre > code {
+            white-space: pre-wrap !important;
+            word-wrap:break-word !important;
+            max-width: inherit !important;
+            line-height: 28px !important;
+        }
+    </style>
+
     <div class="ui centered grid container stackable">
         <div class="twelve wide column stacked">
             <div class="ui segment">
@@ -10,12 +47,14 @@
                         <a data-tooltip="{{ $info['created_at'] }}">
                             <i class="icon clock outline small"></i><span>{{ $info['tranTime'] }}</span>
                         </a>
+{{--                        <span class="divider">&nbsp;&nbsp;/&nbsp;&nbsp;</span>--}}
+{{--                        <span><i class="icon star outline small"></i> 16</span>--}}
                         <span class="divider">&nbsp;&nbsp;/&nbsp;&nbsp;</span>
-                        <span><i class="icon star outline small"></i> 16</span>
-                        <span class="divider">&nbsp;&nbsp;/&nbsp;&nbsp;</span>
-                        <span><i class="thumbs up outline icon"></i> 23</span>
-                        <span class="divider">&nbsp;&nbsp;/&nbsp;&nbsp;</span>
-                        <span><i class="icon comments outline small"></i> 4</span>
+                        <a data-tooltip="本文有n个赞">
+                            <span><i class="thumbs up outline icon"></i>23</span>
+                        </a>
+{{--                        <span class="divider">&nbsp;&nbsp;/&nbsp;&nbsp;</span>--}}
+{{--                        <span><i class="icon comments outline small"></i> 4</span>--}}
                     </p>
                     <div class="ui divider"></div>
                     {!! $info['html'] !!}
@@ -35,7 +74,7 @@
                             </div>
                         </a>
 
-                        <a class="popover item ui" href="#" title="当你发现文章里有错误时，请点此给作者提交纠错建议">
+                        <a class="popover item ui" href="#" title="分享本文到你的其他平台">
                             <div class="top aligned content">
                                 <i class="icon share alternate"></i> 分享
                             </div>

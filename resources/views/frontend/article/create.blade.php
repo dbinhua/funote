@@ -1,7 +1,17 @@
 @extends('layouts.index')
 @section('title', '写作中心')
 @section('content')
-
+    <style>
+        .editormd-preview-container blockquote, .editormd-html-preview blockquote {
+            color: #666;
+            border-left: none;
+            background-color: #f5f8fc;
+            padding: 1rem;
+            margin-left: 0;
+            font-size: 14px;
+            font-style: italic;
+        }
+    </style>
 <div class="ui centered grid container stackable">
     <div class="twelve wide column stacked">
         <div class="ui segment">
@@ -79,9 +89,9 @@
                         <textarea rows="2" name="intro" id="intros"></textarea>
                     </div>
 
-                    <div class="field">
+                    <div class="field" id="editormd">
                         <label for="body-field"></label>
-                        <textarea rows="15" id="body-field" name="content"></textarea>
+                        <textarea rows="15" id="body-field" name="content" style="display:none;"></textarea>
                     </div>
 
                     <div class="inline field">
@@ -112,6 +122,5 @@
 @endsection
 
 @section('js')
-<script src="{{ asset('js/simplemde.min.js') }}"></script>
 <script src="{{ asset('js/create_article.js') }}"></script>
 @endsection

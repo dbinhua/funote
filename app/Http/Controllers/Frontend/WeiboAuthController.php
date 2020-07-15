@@ -30,6 +30,7 @@ class WeiboAuthController extends Controller
 
     public function __construct()
     {
+        parent::__construct();
         $this->client = new Client(['timeout' => 10.0]);
     }
 

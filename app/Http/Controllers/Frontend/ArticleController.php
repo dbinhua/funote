@@ -20,7 +20,6 @@ class ArticleController extends Controller
         if ($this->user->rank != UserRank::SUPERVISOR){
             return redirect()->route('index');
         }
-
         return view('frontend.article.create');
     }
 
@@ -36,8 +35,8 @@ class ArticleController extends Controller
         $data['top'] = isset($data['top']) ? 1 : 0;
         $data['user_id'] = $this->user->id;
 
-        if ($data['act'] == 'pub'){
-            $data['publish_at'] = date('Y-m-d H:i:s', time());
+        if ($data['act'] === 'pub'){
+            $data['publish_at'] = date('Y-m-d H:i:s');
         }
 
         $tags = explode(',', $data['tags']);
@@ -63,7 +62,7 @@ class ArticleController extends Controller
         if ($info){
             $info['html'] = json_decode($info['html']);
             $info['tranTime'] = $time->tranTime($info['created_at']);
-
+            $info['cover'] = $this->handleCoverImg($info['cover']);
             $user_info = $user->getInfoById($info['user_id']);
             $user_info['avatar'] = $this->handleAvatarImg($user_info['avatar']);
 
