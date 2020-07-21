@@ -4,9 +4,11 @@
 Auth::routes(['register' => false]);
 
 //微博三方登录
-Route::get('weibo', 'WeiboAuthController@index')->name('weibo.login');
-Route::get('auth-weibo', 'WeiboAuthController@rollback')->name('weibo.rollback');
-Route::get('share-weibo', 'WeiboAuthController@share')->name('weibo.share')->middleware('auth');
+Route::prefix('weibo')->name('weibo.')->group(function (){
+    Route::get('/', 'WeiboAuthController@index')->name('login');
+    Route::get('auth', 'WeiboAuthController@rollback')->name('rollback');
+    Route::get('share', 'WeiboAuthController@share')->name('share')->middleware('auth');
+});
 
 //前端路由
 Route::get('/', 'IndexController@index')->name('index');
@@ -20,7 +22,6 @@ Route::prefix('article')->middleware('auth')->group(function (){
 });
 
 //个人中心
-
 Route::prefix('user')->middleware('auth')->group(function (){
     Route::get('edit', 'UserController@edit')->name('user.edit');
 });

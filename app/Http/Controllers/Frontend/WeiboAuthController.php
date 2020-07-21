@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Models\User\ThirdUserInfo;
 use App\Models\User\UserInfo;
-use GuzzleHttp\Exception\GuzzleException;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
