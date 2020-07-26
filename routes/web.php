@@ -39,6 +39,7 @@ Route::prefix('api')->middleware('auth')->group(function (){
     Route::prefix('user')->group(function (){
         Route::post('update', 'UserController@update');
         Route::post('uploadImg', 'UserController@uploadImg');
+        Route::post('sendCaptcha', 'CaptchaController@sendCaptcha');
     });
 });
 

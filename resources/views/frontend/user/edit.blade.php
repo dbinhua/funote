@@ -138,18 +138,27 @@
                     <div class="ui icon message">
                         <i class="id shield alternate icon"></i>
                         <div class="content">
-                            <div class="header">绑定你的其他账号</div>
-                            <p>想接收个性化推荐或者让别人瞧瞧你的微博？绑定就是了！</p>
+                            <div class="header">绑定你的手机号</div>
+                            <p>绑定手机号，让你的账号更添一层安全</p>
                         </div>
                     </div>
                     <form class="ui form">
-                        <div class="field">
-                            <label for="email">邮箱
-                                <i class="info icon link blue" id="email-tip" data-content="绑定后即可根据邮箱登录哦" data-variation="mini" data-position="right center"></i></label>
-                            <input type="text" id="email" name="email" placeholder="{{ $userInfo->email }}" value="{{ $userInfo->email }}">
+                        <div class="two fields">
+                            <div class="ten wide field">
+                                <label for="email">手机号
+                                    <i class="info icon link blue" id="email-tip" data-content="绑定后即可使用手机号登录哦" data-variation="mini" data-position="right center"></i></label>
+                                <div class="ui action input">
+                                    <input type="text" id="phoneNumbers" name="phoneNumbers" placeholder="{{ $userInfo->email }}" value="{{ $userInfo->email }}">
+                                    <button class="ui button" type="button" onclick="sendCaptcha()">获取验证码</button>
+                                </div>
+                            </div>
+                            <div class="six wide field">
+                                <label for="email">验证码</label>
+                                <input type="text" id="email" name="email" placeholder="{{ $userInfo->email }}" value="{{ $userInfo->email }}">
+                            </div>
                         </div>
 
-                        <button class="ui right floated black button" style="margin-bottom: 50px"><i class="icon save"></i>保存</button>
+                        <button class="ui right floated black button" style="margin-bottom: 50px"><i class="icon save"></i>绑定</button>
                     </form>
                     <div class="ui divider hidden" style="margin-top: 28px"></div>
                 </div>

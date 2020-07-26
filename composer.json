@@ -10,6 +10,8 @@
     "require": {
         "php": "^7.2",
         "ext-json": "*",
+        "alibabacloud/client": "^1.5",
+        "alibabacloud/sdk": "^1.8",
         "barryvdh/laravel-cors": "^0.11.4",
         "doctrine/dbal": "^2.10",
         "encore/laravel-admin": "^1.7",

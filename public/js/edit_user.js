@@ -72,6 +72,25 @@ $('#info_button').api({
     }
 });
 
+function sendCaptcha(){
+    phoneNumbers = $('#phoneNumbers').val()
+    if (phoneNumbers){
+        $.ajax({
+            url: "/api/user/sendCaptcha",
+            type: 'POST',
+            data: {
+                phoneNumbers: phoneNumbers
+            },
+            success: function(data){
+                console.log(data)
+                // if(data.results.result === 1){
+                //     $('#article_form').form('add prompt', "slug", "当前别名已被占用");
+                // }
+            }
+        });
+    }
+}
+
 $('#gender').dropdown();
 $('#constellation').dropdown();
 $('#profession').dropdown();

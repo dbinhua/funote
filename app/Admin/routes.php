@@ -1,6 +1,8 @@
 <?php
 
 use App\Admin\Controllers\ArticleController;
+use App\Admin\Controllers\DataBlockController;
+use App\Admin\Controllers\RecommendController;
 use App\Admin\Controllers\TagController;
 use App\Admin\Controllers\UserController;
 use Illuminate\Routing\Router;
@@ -22,4 +24,6 @@ Route::group([
     $router->resource('tags', TagController::class);
     $router->resource('users', UserController::class);
     $router->resource('articles', ArticleController::class);
+    $router->resource('blocks', DataBlockController::class);
+    $router->resource('recommends', RecommendController::class);
 });

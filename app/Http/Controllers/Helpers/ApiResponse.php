@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Controllers\Helpers;
 
 use Symfony\Component\HttpFoundation\Response as FoundationResponse;
