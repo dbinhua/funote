@@ -53,7 +53,7 @@ class Article extends Model
      */
     public function getArticleBySlug(string $slug, string $status = self::Publish)
     {
-        $timestamp = date('Y-m-d H:i:s', time());
+        $timestamp = date('Y-m-d H:i:s');
 
         if ($status == self::Publish){
             $article = $this->where([
@@ -71,7 +71,7 @@ class Article extends Model
 
     public function getArticleByIds(array $articleIds, string $status = self::Publish)
     {
-        $timestamp = date('Y-m-d H:i:s', time());
+        $timestamp = date('Y-m-d H:i:s');
 
         if ($status == self::Publish){
             $articles = $this->where([
@@ -81,6 +81,22 @@ class Article extends Model
             $articles = $this->where([
                 ['publish_at', '=', null]
             ])->whereIn('id', $articleIds)->limit(5)->get();
+        }
+        return $articles;
+    }
+
+    public function getArticleInfo(int $articleId, string $status = self::Publish)
+    {
+        $timestamp = date('Y-m-d H:i:s');
+
+        if ($status == self::Publish){
+            $articles = $this->where([
+                ['publish_at', '<=', $timestamp]
+            ])->where('id', $articleId)->first();
+        }elseif ($status == self::Draft){
+            $articles = $this->where([
+                ['publish_at', '=', null]
+            ])->where('id', $articleId)->first();
         }
         return $articles;
     }
