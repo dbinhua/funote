@@ -1,4 +1,4 @@
-<nav class="ui borderless menu top stackable" style="margin-bottom: 40px;">
+<nav class="ui borderless menu top stackable" style="margin-bottom: 32px;height: 54px;">
     <div class="ui container">
         <div class="ui inline dropdown nav">
             <a href="{{ route('index') }}">
