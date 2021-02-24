@@ -33,7 +33,7 @@ pre[class*="language-"] {
 /* Code blocks */
 pre[class*="language-"] {
 	padding: 1em 2em;
-	margin: 1.5em -2em;
+	margin: 1.5em -2.175em;
 	overflow: auto;
 }
 
