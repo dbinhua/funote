@@ -472,11 +472,11 @@
 }
 .editormd-grid-table-row a.selected {
   color: #666;
-  background-color: #eee;
+  background-color: #85929E;
 }
 .editormd-grid-table-row a:hover {
   color: #777;
-  background-color: #f6f6f6;
+  background-color: #85929E;
 }
 
 .editormd-tab-head {

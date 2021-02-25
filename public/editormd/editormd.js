@@ -87,10 +87,11 @@
             "help", "info"
         ],
         myeditor : [
-            "h2", "h3", "|",
+            "h2", "h3", "h4", "bold", "del", "italic", "|",
             "quote", "list-ul", "list-ol", "hr", "|",
-            "link", "reference-link", "code", "code-block", "html-entities", "|",
-            "watch", "preview", "|",
+            "link", "reference-link", "code", "code-block", "|",
+            "image", "emoji", "|",
+            "watch", "fullscreen"
         ]
     };
 

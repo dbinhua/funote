@@ -101,7 +101,7 @@ $('#is_top').checkbox();
 $('#cover_div .image').dimmer({on: 'hover'});
 
 var editor = editormd("editormd", {
-    height  : 540,
+    height  : 600,
     path : '../editormd/lib/',
     toolbarIcons : function() {
         return editormd.toolbarModes['myeditor']

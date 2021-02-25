@@ -139,14 +139,14 @@
 				});
 			}
 
-			var category = ["Github emoji", "Twemoji", "Font awesome", "Editor.md logo"];
+			var category = ["Github emoji", "Twemoji"];
 			var tab      = dialog.find("." + classPrefix + "tab");
 
 			if (tab.html() === "")
 			{
 				var head = "<ul class=\"" + classPrefix + "tab-head\">";
 
-				for (var i = 0; i<4; i++) {
+				for (var i = 0; i < 2; i++) {
 					var active = (i === 0) ? " class=\"active\"" : "";
 					head += "<li" + active + "><a href=\"javascript:;\">" + category[i] + "</a></li>";
 				}
@@ -169,7 +169,7 @@
 			}
 
 			var tabBoxs = tab.find("." + classPrefix + "tab-box");
-            var emojiCategories = ["github-emoji", "twemoji", "font-awesome", logoPrefix];
+            var emojiCategories = ["github-emoji", "twemoji"];
 
 			var drawTable = function() {
                 var cname = emojiCategories[emojiTabIndex];
@@ -213,16 +213,6 @@
                                     var twemojiSrc = exports.twemoji.path + emoji + exports.twemoji.ext;
                                     img = "<img src=\"" + twemojiSrc + "\" width=\"24\" title=\"twemoji-" + emoji + "\" alt=\"twemoji-" + emoji + "\" class=\"emoji twemoji\" />";
                                     row += "<a href=\"javascript:;\" value=\":tw-" + emoji + ":\" title=\":tw-" + emoji + ":\" class=\"" + classPrefix + "emoji-btn\">" + img + "</a>";
-                                }
-                                else if (type === "font-awesome")
-                                {
-                                    icon = "<i class=\"fa fa-" + emoji + " fa-emoji\" title=\"" + emoji + "\"></i>";
-                                    row += "<a href=\"javascript:;\" value=\":fa-" + emoji + ":\" title=\":fa-" + emoji + ":\" class=\"" + classPrefix + "emoji-btn\">" + icon + "</a>";
-                                }
-                                else if (type === "editormd-logo")
-                                {
-                                    icon = "<i class=\"" + emoji + "\" title=\"Editor.md logo (" + emoji + ")\"></i>";
-                                    row += "<a href=\"javascript:;\" value=\":" + emoji + ":\" title=\":" + emoji + ":\" style=\"width:20%;\" class=\"" + classPrefix + "emoji-btn\">" + icon + "</a>";
                                 }
                             }
                             else
