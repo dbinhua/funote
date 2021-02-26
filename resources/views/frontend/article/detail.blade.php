@@ -9,12 +9,13 @@
              padding: 1rem;
              margin-left: 0;
              margin-right: 0;
-             font-size: 14px;
+             font-size: 16px;
              font-style: italic;
          }
 
         li {
-            margin-bottom: 14px;
+            margin-bottom: 16px;
+            font-size: 16px;
         }
 
         p > code, li > code {
@@ -26,7 +27,7 @@
             border: 1px solid #e4e4e4;
             max-width: 740px;
             overflow-x: auto;
-            font-size: 14px;
+            font-size: 16px;
             padding: 1px 5px;
         }
 
@@ -36,12 +37,17 @@
             max-width: inherit !important;
             line-height: 28px !important;
         }
+
+        p {
+            line-height: 32px;
+            font-size: 16px;
+        }
     </style>
 
     <div class="ui centered grid container stackable">
         <div class="twelve wide column stacked">
             <div class="ui segment">
-                <div style="padding: 13px;">
+                <div style="padding: 16px;">
                     <h1 class="ui header center aligned">{{ $info['title'] }}</h1>
                     <p style="margin-bottom: 10px;text-align: center;">
                         <a data-tooltip="{{ $info['created_at'] }}">
@@ -74,9 +80,9 @@
                             </div>
                         </a>
 
-                        <a class="popover item ui" href="#" title="分享本文到你的其他平台">
+                        <a class="popover item ui" href="{{ route('weibo.share', 'URL::current()') }}" title="分享这篇文章到微博">
                             <div class="top aligned content">
-                                <i class="icon share alternate"></i> 分享
+                                <i class="icon share alternate"></i>分享到微博
                             </div>
                         </a>
                     </div>
@@ -407,7 +413,7 @@
 @endsection
 
 @section('js')
-    <script src="{{ asset('js/prism.js?v=4.1') }}"></script>
+    <script src="{{ asset('js/prism.js') }}"></script>
     <script type="text/javascript">
         $('.my-popup').popup();
     </script>

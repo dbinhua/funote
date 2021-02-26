@@ -29,4 +29,9 @@ class ThirdUser extends Model
     {
         return $this->find($id);
     }
+
+    public function getInfoByBindId(int $bind_id, int $type)
+    {
+        return $this->where(compact('bind_id', 'type'))->firstOrFail();
+    }
 }

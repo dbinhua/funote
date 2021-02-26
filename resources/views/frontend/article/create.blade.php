@@ -13,7 +13,7 @@
         }
     </style>
 <div class="ui centered grid container stackable">
-    <div class="twelve wide column stacked">
+    <div class="sixteen wide column stacked">
         <div class="ui segment">
             <div class="content">
                 <div class="ui header gery" style="margin:40px auto;text-align: center;color: grey">
