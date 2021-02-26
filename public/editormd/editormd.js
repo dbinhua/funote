@@ -88,9 +88,8 @@
         ],
         myeditor : [
             "h2", "h3", "h4", "bold", "del", "italic", "|",
-            "quote", "list-ul", "list-ol", "hr", "|",
+            "quote", "list-ul", "list-ol", "hr", "image", "|",
             "link", "reference-link", "code", "code-block", "|",
-            "image", "emoji", "|",
             "watch", "fullscreen"
         ]
     };

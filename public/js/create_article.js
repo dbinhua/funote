@@ -52,14 +52,6 @@ $('#article_form').form({
                     prompt: '简介不得多于75个字符'
                 }
             ]
-        },
-        content: {
-            rules: [
-                {
-                    type: 'minLength[30]',
-                    prompt: '内容不得少于30个字符'
-                }
-            ]
         }
     }
 });
