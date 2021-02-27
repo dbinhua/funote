@@ -20,7 +20,8 @@ class ArticleController extends Controller
         if ($this->user->rank != UserRank::SUPERVISOR){
             return redirect()->route('index');
         }
-        return view('frontend.article.create');
+        $action = 'create';
+        return view('frontend.article.create', compact('action'));
     }
 
     public function postCreate(Request $request, Parsedown $parsedown, Article $article)

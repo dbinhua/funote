@@ -14,7 +14,8 @@
     </style>
 <div class="ui centered grid container stackable">
     <div class="sixteen wide column stacked">
-        <div class="ui segment">
+        <div class="ui segment" id="create-book-div">
+            @include('layouts.components.left-rail-menu')
             <div class="content">
                 <div class="ui header gery" style="margin:40px auto;text-align: center;color: grey">
                     新建文章

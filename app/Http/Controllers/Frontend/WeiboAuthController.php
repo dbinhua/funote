@@ -123,21 +123,19 @@ class WeiboAuthController extends Controller
         return $fresh_info->bind_id;
     }
 
-//    public function share()
-//    {
-//        $thirdUserInfo = ThirdUser::getOne(['id' => Auth::user()->third_auth_id]);
-//
-//        $param = [
-//            'access_token' => $thirdUserInfo->access_token,
-//            'status' => 'Fun Note开通啦！欢迎大家造访～ https://funote.cn'
-//        ];
-//
-//        try{
-//            $this->client->request('POST', self::ShareApi, ['form_params' => $param]);
-//
-//        }catch (\Exception $exception){
-//
-//        }
-//        return redirect()->route('index');
-//    }
+    public function share(ThirdUser $thirdUser, string $shareText = 'hello，成都')
+    {
+        $thirdUserInfo = $thirdUser->getInfoByBindId(Auth::user()->id, ThirdUser::WEIBO);
+        $param = [
+            'access_token' => $thirdUserInfo->access_token,
+            'status' => $shareText.' https://funote.cn'
+        ];
+
+        try{
+            $this->client->request('POST', self::ShareApi, ['form_params' => $param]);
+        }catch (\Exception $exception){
+            dd($exception->getMessage());
+        }
+        return redirect()->route('index');
+    }
 }

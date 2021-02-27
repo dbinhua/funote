@@ -16,9 +16,9 @@ Route::get('detail/{slug}', 'ArticleController@detail')->name('detail');
 Route::get('chat', 'ChatController@index')->name('chat');
 
 //写作中心
-Route::prefix('article')->middleware('auth')->group(function (){
-    Route::get('create', 'ArticleController@getCreate')->name('article.edit');
-    Route::post('create', 'ArticleController@postCreate')->name('article.create');
+Route::prefix('article')->name('article.')->middleware('auth')->group(function (){
+    Route::get('create', 'ArticleController@getCreate')->name('edit');
+    Route::post('create', 'ArticleController@postCreate')->name('create');
 });
 
 //个人中心

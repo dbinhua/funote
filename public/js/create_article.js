@@ -87,6 +87,8 @@ $('#tags-div').dropdown({
     saveRemoteData: false
 });
 
+$('.ui.sticky').sticky({context: '#create-book-div', offset: 20});  //左侧小菜单
+$('.my-popup').popup();  //提示框
 $('#cates').dropdown();
 $('#attr').dropdown();
 $('#is_top').checkbox();
