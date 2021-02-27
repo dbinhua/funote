@@ -7,7 +7,7 @@ Auth::routes(['register' => false]);
 Route::prefix('weibo')->name('weibo.')->group(function (){
     Route::get('/', 'WeiboAuthController@index')->name('login');
     Route::get('auth', 'WeiboAuthController@rollback')->name('rollback');
-    Route::get('share', 'WeiboAuthController@share')->name('share')->middleware('auth');
+    Route::get('share/{shareText?}', 'WeiboAuthController@share')->name('share')->middleware('auth');
 });
 
 //前端路由
