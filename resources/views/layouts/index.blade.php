@@ -49,7 +49,7 @@
 
     $('#weibo-share').click(function () {
         if(user_id !== 0){
-            window.location = '{{ route('weibo.share') }}'
+            {{--window.location = '{{ route('weibo.share') }}'--}}
         }else{
             $('.ui.mini.modal').modal({
                 blurring: true
@@ -77,6 +77,23 @@
             url = window.webkitURL.createObjectURL(file);
         }
         return url ;
+    }
+
+    function shareToWeibo(shareContent){
+        $.ajax({
+            url: "/api/weibo/share",
+            type: 'POST',
+            data: {
+                shareContent: shareContent
+            },
+            success: function(data){
+                if(data.results.result === 1){
+                    $('#share-success-tip').attr('display', "block");
+                }else{
+
+                }
+            }
+        });
     }
 </script>
 </html>

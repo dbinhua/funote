@@ -7,7 +7,6 @@ Auth::routes(['register' => false]);
 Route::prefix('weibo')->name('weibo.')->group(function (){
     Route::get('/', 'WeiboAuthController@index')->name('login');
     Route::get('auth', 'WeiboAuthController@rollback')->name('rollback');
-    Route::get('share/{shareText?}', 'WeiboAuthController@share')->name('share')->middleware('auth');
 });
 
 //前端路由
@@ -40,6 +39,11 @@ Route::prefix('api')->middleware('auth')->group(function (){
         Route::post('update', 'UserController@update');
         Route::post('uploadImg', 'UserController@uploadImg');
         Route::post('sendCaptcha', 'CaptchaController@sendCaptcha');
+    });
+
+    //微博
+    Route::prefix('weibo')->group(function (){
+        Route::post('share', 'WeiboAuthController@share');
     });
 });
 
