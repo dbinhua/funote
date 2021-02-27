@@ -80,7 +80,7 @@
                             </div>
                         </a>
 
-                        <a class="popover item ui" href="{{ route('weibo.share', URL::current()) }}" title="分享这篇文章到微博">
+                        <a class="popover item ui" href="{{ route('weibo.share', urlencode(URL::current())) }}" title="分享这篇文章到微博">
                             <div class="top aligned content">
                                 <i class="icon share alternate"></i>分享到微博
                             </div>
