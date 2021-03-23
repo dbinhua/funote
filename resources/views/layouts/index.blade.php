@@ -12,7 +12,7 @@
     <meta name="description" content="记录一些工作心得和笔记，做一些有趣好玩的小玩意儿。它既是我的笔记本，也是我的练兵场。生命不息，折腾不止(≧∇≦)" />
     <meta name="keywords" content="blog, chat, lucius, 博客, 聊天室, swoole, laravel" />
 
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/semantic/semantic.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('semantic/semantic/dist/semantic.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/myapp.min.css') }}" />
 
     <!--banner-->
@@ -35,7 +35,7 @@
 <script src="{{ asset('js/site/jquery-3.3.1.min.js') }}"></script>
 <script src="{{ asset('js/site/init.js') }}"></script>
 <script src="{{ asset('js/site/count_ws.js') }}"></script>
-<script src="{{ asset('js/site/semantic.min.js') }}"></script>
+<script src="{{ asset('semantic/semantic/dist/semantic.min.js') }}"></script>
 <script src="{{ asset('js/pager.min.js') }}"></script>
 <script src="{{ asset('editormd/editormd.js') }}"></script>
 @if(Route::is('index'))
