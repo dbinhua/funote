@@ -44,9 +44,9 @@
 
                         @if(Auth::user()->rank == \App\Models\User\UserRank::SUPERVISOR)
                             <a href="{{ route('article.edit') }}" class="item">
-                                <i class="icon pencil alternate"></i> 写作中心
+                                <i class="icon pencil alternate"></i> 新建文章
                             </a>
-                            <a href="{{ route('admin.home') }}" target="_blank" class="item">
+                            <a href="#" target="_blank" class="item">
                                 <i class="icon wrench"></i> 管理中心
                             </a>
                         @endif

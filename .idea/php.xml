@@ -131,6 +131,16 @@
       <path value="$PROJECT_DIR$/vendor/mtdowling/jmespath.php" />
       <path value="$PROJECT_DIR$/vendor/danielstjules/stringy" />
       <path value="$PROJECT_DIR$/vendor/alibabacloud/client" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-client-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/league/mime-type-detection" />
+      <path value="$PROJECT_DIR$/vendor/matomo/device-detector" />
+      <path value="$PROJECT_DIR$/vendor/php-parallel-lint/php-console-highlighter" />
+      <path value="$PROJECT_DIR$/vendor/php-parallel-lint/php-console-color" />
+      <path value="$PROJECT_DIR$/vendor/alibabacloud/sdk" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/deprecations" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.2" />

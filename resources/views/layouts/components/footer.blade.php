@@ -6,7 +6,7 @@
                 <h4 class="ui inverted header">关于</h4>
                 <div class="ui inverted link list">
                     <span class="item">蜀ICP备18023940号-1</span>
-                    <span class="item">&copy 2018-2019</span>
+                    <span class="item">&copy 2018-{{ date('Y') }}</span>
                     <span class="item">Design By Lucius</span>
                 </div>
             </div>
