@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\Helpers\ImageTool;
+use App\Http\Controllers\Helpers\PageHelper;
 use App\Models\Article\Tag;
 use App\Models\Article\TagInfo;
 use App\Models\Article\TagLogs;
@@ -15,6 +17,11 @@ use Parsedown;
 
 class ArticleController extends Controller
 {
+    const LIST_STYLE = [
+        1 => ['tipColor' => 'orange', 'statusText' => '原创'],
+        2 => ['tipColor' => 'blue', 'statusText' => '转载']
+    ];
+
     public function getCreate()
     {
         if ($this->user->rank != UserRank::SUPERVISOR){
@@ -53,7 +60,33 @@ class ArticleController extends Controller
         return redirect()->route('index');
     }
 
-    public function detail(User $user, Article $article, $slug)
+    public function manage(Request $request, Article $article)
+    {
+        if ($this->user->rank != UserRank::SUPERVISOR){
+            return redirect()->route('index');
+        }
+
+        //获取分页数据
+        $currentPage = $request->query('page', 1);
+        $count = $article->getSearchCount(['user_id' => $request->user()->id]);
+
+        $totalPage = ceil($count / Article::PAGE_SIZE);
+        $currentPage > $totalPage && $currentPage = $totalPage;
+        $pageOptions = PageHelper::getPageData($currentPage, $count);
+
+        //获取文章数据
+        $articles = $article->searchBooks(['user_id' => $request->user()->id], $currentPage);
+        foreach ($articles as $oneArticle){
+            $oneArticle->cover = $this->handleCoverImg($oneArticle->cover ?? '');
+            $oneArticle->tipColor = self::LIST_STYLE[$oneArticle->attr]['tipColor'];
+            $oneArticle->statusText = self::LIST_STYLE[$oneArticle->attr]['statusText'];
+        }
+
+        $action = 'manage';
+        return view('frontend.article.manage', compact('articles', 'count', 'pageOptions', 'action'));
+    }
+
+    public function detail(User $user, Article $article, string $slug)
     {
         $time = new Timer();
         $tagLogsModel = new TagLogs();
@@ -80,6 +113,37 @@ class ArticleController extends Controller
             $recommend_articles = $article->getArticleByIds($articleIds);
         }
         return view('frontend.article.detail', compact('info','user_info', 'tags', 'recommend_articles'));
+    }
+
+    public function updatePage(User $user, Article $article, string $slug)
+    {
+        $time = new Timer();
+        $tagLogsModel = new TagLogs();
+        $tagModel = new Tag();
+
+        $info = $article->getArticleBySlug($slug);
+        if ($info){
+            $info['content'] = json_decode($info['content']);
+            $info['tranTime'] = $time->tranTime($info['created_at']);
+            $info['cover'] = $this->handleCoverImg($info['cover']);
+            $user_info = $user->getInfoById($info['user_id']);
+            $user_info['avatar'] = $this->handleAvatarImg($user_info['avatar']);
+
+            $tagLogs = $tagLogsModel->getLogs(0, $info['id']);
+            $tags = $articleIds = [];
+            foreach ($tagLogs as $tagLog){
+                $tagInfo = $tagModel->getTagInfo($tagLog->tag_id);
+                $tags[] = $tagInfo;
+                $recom_tagLogs = $tagLogsModel->getLogs($tagLog->tag_id);
+                foreach ($recom_tagLogs as $log){
+                    $articleIds[] = $log->article_id;
+                }
+            }
+            $tags = implode(',', array_column($tags, 'name'));
+            $recommend_articles = $article->getArticleByIds($articleIds);
+        }
+        $action = 'update';
+        return view('frontend.article.update', compact('info','user_info', 'tags', 'recommend_articles', 'action'));
     }
 
     public function handleArticleTags(int $articleId, array $tags)

@@ -46,7 +46,7 @@
                             <a href="{{ route('article.edit') }}" class="item">
                                 <i class="icon pencil alternate"></i> 新建文章
                             </a>
-                            <a href="#" target="_blank" class="item">
+                            <a href="{{ route('article.manage') }}" class="item">
                                 <i class="icon wrench"></i> 管理中心
                             </a>
                         @endif

@@ -96,7 +96,7 @@ $('#cover_div .image').dimmer({on: 'hover'});
 
 var editor = editormd("editormd", {
     height  : 600,
-    path : '../editormd/lib/',
+    path : '/editormd/lib/',
     toolbarIcons : function() {
         return editormd.toolbarModes['myeditor']
     },

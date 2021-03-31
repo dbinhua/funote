@@ -26,6 +26,8 @@ class Article extends Model
 
     const Publish = 1;   //已发布
     const Draft = 2;     //草稿
+    const PAGE = 1;
+    const PAGE_SIZE = 10;
 
     protected $article_id;
 
@@ -99,5 +101,27 @@ class Article extends Model
             ])->where('id', $articleId)->first();
         }
         return $articles;
+    }
+
+    public function getSearchCount(array $filter = [])
+    {
+        $bookFilter = [];
+        foreach ($filter as $key => $val){
+            if ($val === null) continue;
+            $bookFilter[] = [$key, $val];
+        }
+        return $this->where($bookFilter)->count();
+    }
+
+    public function searchBooks(array $filter = [], int $page = self::PAGE, int $pageSize = self::PAGE_SIZE)
+    {
+        $offset = ($page - 1) * $pageSize;
+
+        $bookFilter = [];
+        foreach ($filter as $key => $val){
+            if ($val === null) continue;
+            $bookFilter[] = [$key, $val];
+        }
+        return $this->where($bookFilter)->orderBy('created_at', 'desc')->offset($offset)->limit($pageSize)->get();
     }
 }

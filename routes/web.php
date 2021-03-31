@@ -18,6 +18,8 @@ Route::get('chat', 'ChatController@index')->name('chat');
 Route::prefix('article')->name('article.')->middleware('auth')->group(function (){
     Route::get('create', 'ArticleController@getCreate')->name('edit');
     Route::post('create', 'ArticleController@postCreate')->name('create');
+    Route::get('manage', 'ArticleController@manage')->name('manage');
+    Route::get('update/{slug}', 'ArticleController@updatePage')->name('update');
 });
 
 //个人中心

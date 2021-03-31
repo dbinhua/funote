@@ -5,7 +5,7 @@
 <div class="left ui rail" style="left: -90px;top: 0;width: 66px;">
     <div class="ui sticky">
         <div class="ui mini vertical labeled icon menu" style="width: 66px;">
-            <a class="item my-popup @if($action === 'create') active @endif" data-content="创建作品" data-position="right center" href="{{ route('article.edit') }}">
+            <a class="item my-popup @if($action === 'create') active @endif" data-content="新建文章" data-position="right center" href="{{ route('article.edit') }}">
                 <i class="edit icon @if($action === 'create') orange @else grey @endif"></i>
                 @if($action === 'create')
                     <b class="text-orange">新建</b>
@@ -13,20 +13,12 @@
                     <span class="text-grey">新建</span>
                 @endif
             </a>
-            <a class="item my-popup @if($action === 'manage') active @endif" data-content="管理作品" data-position="right center" href="{{ route('article.edit') }}">
+            <a class="item my-popup @if($action === 'manage') active @endif" data-content="管理文章" data-position="right center" href="{{ route('article.manage') }}">
                 <i class="book icon @if($action === 'manage') orange @else grey @endif"></i>
                 @if($action === 'manage')
                     <b class="text-orange">管理</b>
                 @else
                     <span class="text-grey">管理</span>
-                @endif
-            </a>
-            <a class="item my-popup @if($action === 'advisory') active @endif" data-content="作者咨询" data-position="right center" href="{{ route('article.edit') }}">
-                <i class="question circle icon @if($action === 'advisory') orange @else grey @endif"></i>
-                @if($action === 'advisory')
-                    <b class="text-orange">咨询</b>
-                @else
-                    <span class="text-grey">咨询</span>
                 @endif
             </a>
         </div>
