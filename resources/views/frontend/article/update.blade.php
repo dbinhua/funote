@@ -21,7 +21,7 @@
                         新建文章
                     </div>
 
-                    <form class="ui form" method="POST" action="{{ route('article.create') }}" enctype="multipart/form-data" id="article_form" name="article_form">
+                    <form class="ui form" method="POST" action="{{ route('article.post-update') }}" enctype="multipart/form-data" id="article_form" name="article_form">
                         @csrf
                         <div class="card" id="cover_div" style="float: right;">
                             <div class="blurring dimmable image">
@@ -33,7 +33,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <img src="{{ asset('images/default_cover.png') }}" alt="" class="ui image rounded Medium" style="width: 300px;height: 175px" id="cover_img">
+                                <img src="{{ $info->cover }}" alt="" class="ui image rounded Medium" style="width: 300px;height: 175px" id="cover_img">
                             </div>
                         </div>
 
@@ -97,7 +97,7 @@
 
                         <div class="inline field">
                             <div class="ui toggle checkbox" id="is_top">
-                                <input type="checkbox" class="hidden" name="top" id="top">
+                                <input type="checkbox" class="hidden" name="top" id="top" @if($info->top == 1) checked @endif>
                                 <label for="top">是否置顶</label>
                             </div>
                         </div>
@@ -114,6 +114,7 @@
                             </button>
                         </div>
 
+                        <input type="hidden" name="article_id" value="{{ $info->id }}">
                         <input type="hidden" name='act' value="draft"/>
                     </form>
                 </div>
