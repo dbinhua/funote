@@ -197,9 +197,8 @@ class ArticleController extends Controller
         $info = $article->getArticleBySlug($req['slug']);
         if (!$info || ($info && $info['id'] == $req['id'])){
             return $this->success(['result' => 0]);
-        }else{
-            return $this->success(['result' => 1]);
         }
+        return $this->success(['result' => 1]);
     }
 
     public function searchTagsByName(Tag $tag, string $tagName)
