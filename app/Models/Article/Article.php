@@ -43,6 +43,20 @@ class Article extends Model
         return $this->getId();
     }
 
+    /**
+     * @param int $articleId
+     * @param array $articleData
+     * @return mixed
+     */
+    public function updateArticle(int $articleId, array $articleData)
+    {
+        $article = $this->find($articleId);
+        foreach ($articleData as $key => $item){
+            $article->{$key} = $item;
+        }
+        return $article->save();
+    }
+
     public function getId()
     {
         return $this->article_id;

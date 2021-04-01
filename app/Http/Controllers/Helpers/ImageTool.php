@@ -4,8 +4,8 @@ namespace App\Http\Controllers\Helpers;
 
 trait ImageTool
 {
-    private static $default_cover = 'images/default_cover.png';
-    private static $default_avatar = 'images/default_avatar.png';
+    private static $default_cover = '/images/default_cover.png';
+    private static $default_avatar = '/images/default_avatar.png';
 
     public function getAbsoluteImagePath(string $path):string
     {
@@ -18,17 +18,17 @@ trait ImageTool
     public function handleCoverImg(string $path = null):string
     {
         if ($path){
-            return 'storage/'.$path;
-        }else{
-            return self::$default_cover;
+            return '/storage/'.$path;
         }
+        return self::$default_cover;
     }
 
     public function handleAvatarImg(string $path = null):string
     {
-        if ($path && strpos($path, 'http') === false){
+        if ($path && strpos($path, 'http') === false) {
             return 'storage/'.$path;
-        }elseif(!$path){
+        }
+        if (!$path) {
             return self::$default_avatar;
         }
         return $path;

@@ -20,6 +20,7 @@ Route::prefix('article')->name('article.')->middleware('auth')->group(function (
     Route::post('create', 'ArticleController@postCreate')->name('create');
     Route::get('manage', 'ArticleController@manage')->name('manage');
     Route::get('update/{slug}', 'ArticleController@updatePage')->name('update');
+    Route::post('update', 'ArticleController@postUpdate')->name('post-update');
 });
 
 //个人中心
