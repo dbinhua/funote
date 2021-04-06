@@ -8,10 +8,9 @@
 
                     <div class="ui secondary menu" id="opt">
                         <a class="item active" data-tab="all">全部</a>
-                        <a class="item" data-tab="up">已上架</a>
-                        <a class="item" data-tab="df">提审中</a>
-                        <a class="item" data-tab="gf">已驳回</a>
-                        <a class="item" data-tab="aa">草稿</a>
+                        <a class="item" data-tab="up">原创</a>
+                        <a class="item" data-tab="df">转载</a>
+                        <a class="item" data-tab="gf">定时发布</a>
                     </div>
 
                     <div class="ui divider"></div>
@@ -21,18 +20,18 @@
                             <div class="column">
                                 <div class="ui card {{ $book['tipColor'] }}" style="width: 100%;flex-direction: row;">
                                     <div style="width: 100%;margin: 10px;padding: 15px">
-                                        <h3 class="ui header">
+                                        <h4 class="ui header">
                                             <div class="content"><a href="{{ route('detail', $book['slug']) }}">{{ $book['title'] }}</a>
                                             </div>
-                                        </h3>
-                                        <button class="ui primary basic mini button update-book" data-id="{{ $book['slug'] }}" style="margin: 8px">编辑文章</button>
+                                        </h4>
+                                        <button class="ui primary basic mini button update-book" data-id="{{ $book['slug'] }}" style="margin: 8px 8px 8px 0">编辑文章</button>
                                         <button class="ui red basic mini button remove-book" data-id="{{ $book['slug'] }}" style="margin: 8px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;删除&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
                                     </div>
 
                                     <div class="image" style="margin: 10px;">
                                         <span class="ui right ribbon label {{ $book['tipColor'] }}">{{ $book['statusText'] }}</span>
                                         <a href="{{ route('detail', $book['slug']) }}">
-                                            <img src="{{ asset($book['cover']) }}" style="width: 135px;">
+                                            <img src="{{ asset($book['cover']) }}" style="width: 160px;height: 100%">
                                         </a>
                                     </div>
                                 </div>
