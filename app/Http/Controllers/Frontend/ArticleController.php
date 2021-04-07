@@ -21,7 +21,7 @@ class ArticleController extends Controller
         2 => ['tipColor' => 'blue', 'statusText' => '转载']
     ];
 
-    public function getCreate()
+    public function createPage()
     {
         if ($this->user->rank != UserRank::SUPERVISOR){
             return redirect()->route('index');
@@ -30,7 +30,7 @@ class ArticleController extends Controller
         return view('frontend.article.create', compact('action'));
     }
 
-    public function postCreate(Request $request, Parsedown $parsedown, Article $article)
+    public function create(Request $request, Parsedown $parsedown, Article $article)
     {
         if ($this->user->rank != UserRank::SUPERVISOR){
             return redirect()->route('index');
@@ -55,8 +55,7 @@ class ArticleController extends Controller
         if ($article_id){
             $this->handleArticleTags($article_id, $tags);
         }
-
-        return redirect()->route('index');
+        return redirect()->route('detail', $data['slug']);
     }
 
     public function manage(Request $request, Article $article)
@@ -144,7 +143,7 @@ class ArticleController extends Controller
         return view('frontend.article.update', compact('info','user_info', 'tags', 'recommend_articles', 'action'));
     }
 
-    public function postUpdate(Request $request, Parsedown $parsedown, Article $article)
+    public function update(Request $request, Parsedown $parsedown, Article $article)
     {
         if ($this->user->rank != UserRank::SUPERVISOR){
             return redirect()->route('index');
@@ -167,8 +166,7 @@ class ArticleController extends Controller
         if ($result){
             $this->handleArticleTags($data['article_id'], $tags);
         }
-
-        return redirect()->route('index');
+        return redirect()->route('detail', $data['slug']);
     }
 
     public function handleArticleTags(int $articleId, array $tags)

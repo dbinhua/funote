@@ -21,7 +21,7 @@
                         新建文章
                     </div>
 
-                    <form class="ui form" method="POST" action="{{ route('article.post-update') }}" enctype="multipart/form-data" id="article_form" name="article_form">
+                    <form class="ui form" method="POST" action="{{ route('article.update') }}" enctype="multipart/form-data" id="article_form" name="article_form">
                         @csrf
                         <div class="card" id="cover_div" style="float: right;">
                             <div class="blurring dimmable image">

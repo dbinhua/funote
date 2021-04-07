@@ -16,11 +16,11 @@ Route::get('chat', 'ChatController@index')->name('chat');
 
 //写作中心
 Route::prefix('article')->name('article.')->middleware('auth')->group(function (){
-    Route::get('create', 'ArticleController@getCreate')->name('edit');
-    Route::post('create', 'ArticleController@postCreate')->name('create');
+    Route::get('create', 'ArticleController@createPage')->name('create-page');
+    Route::post('create', 'ArticleController@create')->name('create');
+    Route::post('update', 'ArticleController@update')->name('update');
     Route::get('manage', 'ArticleController@manage')->name('manage');
-    Route::get('update/{slug}', 'ArticleController@updatePage')->name('update');
-    Route::post('update', 'ArticleController@postUpdate')->name('post-update');
+    Route::get('update/{slug}', 'ArticleController@updatePage')->name('update-page');
 });
 
 //个人中心

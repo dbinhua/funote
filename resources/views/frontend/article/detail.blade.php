@@ -48,15 +48,15 @@
         <div class="twelve wide column stacked">
             <div class="ui segment">
                 <div style="padding: 16px;">
-                    <h1 class="ui header center aligned">{{ $info['title'] }}</h1>
+                    <h2 class="ui header center aligned">{{ $info['title'] }}</h2>
                     <p style="margin-bottom: 10px;text-align: center;">
-                        <a data-tooltip="{{ $info['created_at'] }}">
+                        <a data-tooltip="{{ $info['created_at'] }}" data-position="bottom center">
                             <i class="icon clock outline small"></i><span>{{ $info['tranTime'] }}</span>
                         </a>
 {{--                        <span class="divider">&nbsp;&nbsp;/&nbsp;&nbsp;</span>--}}
 {{--                        <span><i class="icon star outline small"></i> 16</span>--}}
                         <span class="divider">&nbsp;&nbsp;/&nbsp;&nbsp;</span>
-                        <a data-tooltip="本文有n个赞">
+                        <a data-tooltip="本文有nd个赞" data-position="bottom center">
                             <span><i class="thumbs up outline icon"></i>23</span>
                         </a>
 {{--                        <span class="divider">&nbsp;&nbsp;/&nbsp;&nbsp;</span>--}}
@@ -65,7 +65,7 @@
                     <div class="ui divider"></div>
                     {!! $info['html'] !!}
                     @if($tags)
-                    <div class="meta" style="margin: 35px 0px;">
+                    <div class="meta" style="margin: 35px 0;">
                         <i class="icon tags"></i>
                         @foreach($tags as $tag)
                             <a class="ui label small blue" href="#">{{ $tag['name'] }}</a>
@@ -130,13 +130,17 @@
                 <div class="ui card">
                     <div class="content">
                         @if(strpos($user_info['avatar'], 'http') === false)
-                            <a href="#"><img class="ui avatar big image right floated" src="{{ asset($user_info['avatar']) }}"></a>
+                            <a href="{{ route('user', $user_info->id) }}">
+                                <img class="ui avatar big image right floated" src="{{ asset($user_info->avatar) }}">
+                            </a>
                         @else
-                            <a href="#"><img class="ui avatar big image right floated" src="{{ $user_info['avatar'] }}"></a>
+                            <a href="{{ route('user', $user_info->id) }}">
+                                <img class="ui avatar big image right floated" src="{{ $user_info->avatar }}">
+                            </a>
                         @endif
 
                         <div class="header" style="line-height: 2em;margin: 0 auto;">
-                            <a href="#">{{ $user_info['name'] }}</a>
+                            <a href="{{ route('user', $user_info->id) }}">{{ $user_info->name }}</a>
                         </div>
 
                         <div class="meta" style="font-size: 13px;">

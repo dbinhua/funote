@@ -73,7 +73,7 @@
                 <div class="ui placeholder segment" style="background-color: #fff;height:70vh;" id="example1">
                     @include('layouts.components.left-rail-menu')
                     <div class="ui icon header" style="margin-top: -36px;"><i class="inbox icon"></i> 您还没有作品哦，快来写点东西吧 </div>
-                    <a href="{{ route('center.create-book') }}">
+                    <a href="{{ route('article.create-page') }}">
                         <div class="ui primary button">创建作品</div>
                     </a>
                 </div>

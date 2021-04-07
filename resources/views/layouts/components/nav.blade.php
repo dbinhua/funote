@@ -43,7 +43,7 @@
                         </a>
 
                         @if(Auth::user()->rank == \App\Models\User\UserRank::SUPERVISOR)
-                            <a href="{{ route('article.edit') }}" class="item">
+                            <a href="{{ route('article.create-page') }}" class="item">
                                 <i class="icon pencil alternate"></i> 新建文章
                             </a>
                             <a href="{{ route('article.manage') }}" class="item">

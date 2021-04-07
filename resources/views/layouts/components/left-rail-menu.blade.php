@@ -5,7 +5,7 @@
 <div class="left ui rail" style="left: -90px;top: 0;width: 66px;">
     <div class="ui sticky">
         <div class="ui mini vertical labeled icon menu" style="width: 66px;">
-            <a class="item my-popup @if($action === 'create') active @endif" data-content="新建文章" data-position="right center" href="{{ route('article.edit') }}">
+            <a class="item my-popup @if($action === 'create') active @endif" data-content="新建文章" data-position="right center" href="{{ route('article.create-page') }}">
                 <i class="edit icon @if($action === 'create') orange @else grey @endif"></i>
                 @if($action === 'create')
                     <b class="text-orange">新建</b>
