@@ -30,9 +30,6 @@
 .swiper-container-horizontal>.swiper-pagination-bullets.solution-pagination{bottom:15px}
 .solution-pagination .swiper-pagination-bullet{width:24px;height:4px;border-radius:100px;overflow:hidden;background:#dfe1f1;border:none;cursor:pointer;content:'';display:inline-block;box-sizing:border-box;opacity:1;vertical-align:middle}
 .solution-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active{background:#f66f6a;box-sizing:border-box}
-.swiper-container-solution .swiper-button-prev{left:0;width:14.5px;height:30px;margin-top:1;background-image:url(../images/marketplace-home-arrow_big.svg);background-size:cover;transition:background-image .15s}
-.swiper-container-solution .swiper-button-next{right:0;width:14.5px;height:30px;margin-top:1;background-image:url(../images/marketplace-home-arrow_big.svg);transform:rotate(180deg);background-size:cover;transition:background-image .15s}
-.swiper-container-solution .swiper-button-next:hover,.swiper-container-solution .swiper-button-prev:hover{background-image:url(../images/marketplace-home-arrow_big_hover.svg);transition:background-image .2s}
 
 /*page css*/
 .clearfix {clear: both;}

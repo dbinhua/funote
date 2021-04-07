@@ -17,7 +17,7 @@
 
     <!--banner-->
     @if(Route::is('index'))
-        <link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/Swiper/4.5.0/css/swiper.min.css" />
+        <link rel="stylesheet" type="text/css" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     @endif
 
     <link rel="stylesheet" type="text/css" href="{{ asset('css/markdown/prism.css') }}">
@@ -39,7 +39,7 @@
 <script src="{{ asset('js/pager.min.js') }}"></script>
 <script src="{{ asset('editormd/editormd.js') }}"></script>
 @if(Route::is('index'))
-    <script src="https://cdn.bootcss.com/Swiper/4.5.0/js/swiper.min.js"></script>
+    <script src="https://unpkg.com/swiper@6.5.4/swiper-bundle.min.js"></script>
 @endif
 
 @yield('js')
