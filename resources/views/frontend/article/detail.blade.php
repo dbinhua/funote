@@ -31,6 +31,11 @@
             padding: 1px 5px;
         }
 
+        p > a > img {
+            width: 100%;
+            margin: 0 auto;
+        }
+
         pre > code {
             white-space: pre-wrap !important;
             word-wrap:break-word !important;
