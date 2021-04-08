@@ -59,6 +59,7 @@
 
     $('.menu .item').tab();
     $('#error-div').dropdown();
+    $('#mobile-nav').dropdown();
 
     $("#pager").zPager({
         totalData: 50,
