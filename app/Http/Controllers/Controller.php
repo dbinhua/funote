@@ -10,6 +10,7 @@ use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Support\Facades\View;
+use Browser;
 
 class Controller extends BaseController
 {
@@ -23,6 +24,7 @@ class Controller extends BaseController
             $this->user = $request->user();
             $this->user && $this->user->avatar = $this->handleAvatarImg($this->user->avatar);
             View::share('userInfo', $this->user);
+            View::share('isMobile', Browser::isMobile());
             return $next($request);
         });
     }
